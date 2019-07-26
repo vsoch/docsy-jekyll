@@ -1,8 +1,8 @@
 # Docsy Jekyll Theme
 
-[![CircleCI](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master.svg?style=svg)](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master)
-
 **under development**
+
+[![CircleCI](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master.svg?style=svg)](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master)
 
 ![assets/img/docsy-jekyll.png](assets/img/docsy-jekyll.png)
 
