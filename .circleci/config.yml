@@ -9,7 +9,7 @@ workflows:
       - build-site:
           filters:
             branches:
-              ignore: masterr
+              ignore: master
 
 build_jekyll: &build_jekyll
     name: Jekyll Build
