@@ -49,7 +49,8 @@ feedback: true
 # If commented, will use material hat theme
 # logo: "assets/img/logo/SRCC-square-red.png"
 logo_pixels: 34
-color: "#8c1515" # primary color for header, buttons
+color: "#30638e"
+# color: "#8c1515" # primary color for header, buttons
 
 # Build settings
 markdown: kramdown

@@ -1,3 +1,8 @@
+---
+layout: null
+excluded_in_search: true
+---
+
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i";
 @fa-font-path: "../webfonts";
 
@@ -20,7 +25,7 @@
     --white: #fff;
     --gray: #888;
     --gray-dark: #333;
-    --primary: #30638E;
+    --primary: {{ site.color }};
     --secondary: #D95040;
     --success: #3772FF;
     --info: #C0E0DE;
@@ -2852,6 +2857,9 @@ textarea.form-control {
     }
 }
 
+
+/* Buttons */
+
 .btn:hover,
 .btn:focus {
     text-decoration: none
@@ -2894,22 +2902,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x;
-    border-color: #30638e;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075)
+    background-color: #30638e;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background: #264f71 -webkit-gradient(linear, left top, left bottom, from(#476987), to(#264f71)) repeat-x;
-    background: #264f71 -webkit-linear-gradient(top, #476987, #264f71) repeat-x;
-    background: #264f71 -o-linear-gradient(top, #476987, #264f71) repeat-x;
-    background: #264f71 linear-gradient(180deg, #476987, #264f71) repeat-x;
-    border-color: #234868
+    background-color: {{ site.color }};
+    border-color: {{ site.color }};
 }
 
 .btn-primary:focus,
@@ -2921,8 +2920,8 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #30638e;
-    border-color: #30638e
+    background-color: {{ site.color }};
+    border-color: {{ site.color }}
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
@@ -2943,22 +2942,13 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff;
-    background: #D95040 -webkit-gradient(linear, left top, left bottom, from(#df6a5d), to(#D95040)) repeat-x;
-    background: #d95040 -webkit-linear-gradient(top, #df6a5d, #D95040) repeat-x;
-    background: #d95040 -o-linear-gradient(top, #df6a5d, #D95040) repeat-x;
-    background: #d95040 linear-gradient(180deg, #df6a5d, #D95040) repeat-x;
-    border-color: #d95040;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075)
+    background-color: #888;
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background: #ca3928 -webkit-gradient(linear, left top, left bottom, from(#d25748), to(#ca3928)) repeat-x;
-    background: #ca3928 -webkit-linear-gradient(top, #d25748, #ca3928) repeat-x;
-    background: #ca3928 -o-linear-gradient(top, #d25748, #ca3928) repeat-x;
-    background: #ca3928 linear-gradient(180deg, #d25748, #ca3928) repeat-x;
-    border-color: #c03626
+    background-color: {{ site.color }};
+    border-color: {{ site.color }};
 }
 
 .btn-secondary:focus,
@@ -2992,22 +2982,14 @@ fieldset:disabled a.btn {
 
 .btn-success {
     color: #fff;
-    background: #3772FF -webkit-gradient(linear, left top, left bottom, from(#5587ff), to(#3772FF)) repeat-x;
-    background: #3772ff -webkit-linear-gradient(top, #5587ff, #3772FF) repeat-x;
-    background: #3772ff -o-linear-gradient(top, #5587ff, #3772FF) repeat-x;
-    background: #3772ff linear-gradient(180deg, #5587ff, #3772FF) repeat-x;
-    border-color: #3772ff;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075)
+    background-color: #13a733;
+    border-color: #13a733;
 }
 
 .btn-success:hover {
     color: #fff;
-    background: #1157ff -webkit-gradient(linear, left top, left bottom, from(#3470ff), to(#1157ff)) repeat-x;
-    background: #1157ff -webkit-linear-gradient(top, #3470ff, #1157ff) repeat-x;
-    background: #1157ff -o-linear-gradient(top, #3470ff, #1157ff) repeat-x;
-    background: #1157ff linear-gradient(180deg, #3470ff, #1157ff) repeat-x;
-    border-color: #044eff
+    background-color: {{ site.color }};
+    border-color: {{ site.color }};
 }
 
 .btn-success:focus,
@@ -3040,23 +3022,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-info {
-    color: #222;
-    background: #C0E0DE -webkit-gradient(linear, left top, left bottom, from(#c9e5e3), to(#C0E0DE)) repeat-x;
-    background: #c0e0de -webkit-linear-gradient(top, #c9e5e3, #C0E0DE) repeat-x;
-    background: #c0e0de -o-linear-gradient(top, #c9e5e3, #C0E0DE) repeat-x;
-    background: #c0e0de linear-gradient(180deg, #c9e5e3, #C0E0DE) repeat-x;
-    border-color: #c0e0de;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075)
+    color: #fff;
+    background-color: #479de7;
 }
 
 .btn-info:hover {
     color: #fff;
-    background: #a6d3d1 -webkit-gradient(linear, left top, left bottom, from(#b4dad8), to(#a6d3d1)) repeat-x;
-    background: #a6d3d1 -webkit-linear-gradient(top, #b4dad8, #a6d3d1) repeat-x;
-    background: #a6d3d1 -o-linear-gradient(top, #b4dad8, #a6d3d1) repeat-x;
-    background: #a6d3d1 linear-gradient(180deg, #b4dad8, #a6d3d1) repeat-x;
-    border-color: #9ecfcc
+    background-color: {{ site.color }};
+    border-color: {{ site.color }};
 }
 
 .btn-info:focus,
@@ -3090,22 +3063,13 @@ fieldset:disabled a.btn {
 
 .btn-warning {
     color: #fff;
-    background: #ED6A5A -webkit-gradient(linear, left top, left bottom, from(#f08073), to(#ED6A5A)) repeat-x;
-    background: #ed6a5a -webkit-linear-gradient(top, #f08073, #ED6A5A) repeat-x;
-    background: #ed6a5a -o-linear-gradient(top, #f08073, #ED6A5A) repeat-x;
-    background: #ed6a5a linear-gradient(180deg, #f08073, #ED6A5A) repeat-x;
-    border-color: #ed6a5a;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075)
+    background-color: #f7820a;
 }
 
 .btn-warning:hover {
     color: #fff;
-    background: #e94b38 -webkit-gradient(linear, left top, left bottom, from(#ed6655), to(#e94b38)) repeat-x;
-    background: #e94b38 -webkit-linear-gradient(top, #ed6655, #e94b38) repeat-x;
-    background: #e94b38 -o-linear-gradient(top, #ed6655, #e94b38) repeat-x;
-    background: #e94b38 linear-gradient(180deg, #ed6655, #e94b38) repeat-x;
-    border-color: #e8402c
+    background-color: {{ site.color }};
+    border-color: {{ site.color }};
 }
 
 .btn-warning:focus,
@@ -3139,22 +3103,13 @@ fieldset:disabled a.btn {
 
 .btn-danger {
     color: #fff;
-    background: #ED6A5A -webkit-gradient(linear, left top, left bottom, from(#f08073), to(#ED6A5A)) repeat-x;
-    background: #ed6a5a -webkit-linear-gradient(top, #f08073, #ED6A5A) repeat-x;
-    background: #ed6a5a -o-linear-gradient(top, #f08073, #ED6A5A) repeat-x;
-    background: #ed6a5a linear-gradient(180deg, #f08073, #ED6A5A) repeat-x;
-    border-color: #ed6a5a;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075)
+    background-color: #d95040;
 }
 
 .btn-danger:hover {
     color: #fff;
-    background: #e94b38 -webkit-gradient(linear, left top, left bottom, from(#ed6655), to(#e94b38)) repeat-x;
-    background: #e94b38 -webkit-linear-gradient(top, #ed6655, #e94b38) repeat-x;
-    background: #e94b38 -o-linear-gradient(top, #ed6655, #e94b38) repeat-x;
-    background: #e94b38 linear-gradient(180deg, #ed6655, #e94b38) repeat-x;
-    border-color: #e8402c
+    background-color: {{ site.color }};
+    border-color: {{ site.color }};
 }
 
 .btn-danger:focus,
@@ -3285,16 +3240,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-    color: #30638e;
+    color: {{ site.color }};
     background-color: transparent;
     background-image: none;
-    border-color: #30638e
+    border-color: {{ site.color }}
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #30638e;
-    border-color: #30638e
+    background-color: {{ site.color }};
+    border-color: {{ site.color }}
 }
 
 .btn-outline-primary:focus,
@@ -3305,7 +3260,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #30638e;
+    color: {{ site.color }};
     background-color: transparent
 }
 
@@ -3313,8 +3268,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #30638e;
-    border-color: #30638e
+    background-color: {{ site.color }};
+    border-color: {{ site.color }}
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -3888,10 +3843,10 @@ input[type=button].btn-block {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x
 }
 
 .dropdown-item.disabled,
@@ -4303,10 +4258,10 @@ input[type=button].btn-block {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x;
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x;
     -webkit-box-shadow: none;
     box-shadow: none
 }
@@ -4373,10 +4328,10 @@ input[type=button].btn-block {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
@@ -4384,10 +4339,10 @@ input[type=button].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x;
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x;
     -webkit-box-shadow: none;
     box-shadow: none
 }
@@ -4409,10 +4364,10 @@ input[type=button].btn-block {
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-label::before {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-label::after {
@@ -4597,9 +4552,9 @@ input[type=button].btn-block {
     width: 1rem;
     height: 1rem;
     margin-top: -.25rem;
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x;
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-box-shadow: 0 .1rem .25rem rgba(0, 0, 0, .1);
@@ -4642,7 +4597,7 @@ input[type=button].btn-block {
 .custom-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x;
     border: 0;
     border-radius: 1rem;
     box-shadow: 0 .1rem .25rem rgba(0, 0, 0, .1);
@@ -4684,7 +4639,7 @@ input[type=button].btn-block {
     margin-top: 0;
     margin-right: .2rem;
     margin-left: .2rem;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x;
     border: 0;
     border-radius: 1rem;
     box-shadow: 0 .1rem .25rem rgba(0, 0, 0, .1);
@@ -4822,7 +4777,7 @@ input[type=button].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .nav-fill .nav-item {
@@ -5794,7 +5749,7 @@ input[type=button].btn-block {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #30638e;
+    background-color: {{ site.color }};
     border-color: #2a567b
 }
 
@@ -5869,7 +5824,7 @@ input[type=button].btn-block {
 
 .badge-primary {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .badge-primary[href]:hover,
@@ -6045,7 +6000,7 @@ input[type=button].btn-block {
 }
 
 .alert-success {
-    color: #1d3b85;
+    color: #13a733;
     background: #d7e3ff -webkit-gradient(linear, left top, left bottom, from(#dde7ff), to(#d7e3ff)) repeat-x;
     background: #d7e3ff -webkit-linear-gradient(top, #dde7ff, #d7e3ff) repeat-x;
     background: #d7e3ff -o-linear-gradient(top, #dde7ff, #d7e3ff) repeat-x;
@@ -6204,7 +6159,7 @@ input[type=button].btn-block {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #30638e;
+    background-color: {{ site.color }};
     -webkit-transition: width .6s ease;
     -o-transition: width .6s ease;
     transition: width .6s ease
@@ -6317,8 +6272,8 @@ input[type=button].btn-block {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #30638e;
-    border-color: #30638e
+    background-color: {{ site.color }};
+    border-color: {{ site.color }}
 }
 
 .list-group-flush .list-group-item {
@@ -7349,7 +7304,7 @@ button.close {
 }
 
 .bg-primary {
-    background-color: #30638e!important
+    background-color: {{ site.color }}!important
 }
 
 a.bg-primary:hover,
@@ -7437,10 +7392,10 @@ button.bg-dark:focus {
 }
 
 .bg-gradient-primary {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x!important;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x!important
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x!important;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x!important
 }
 
 .bg-gradient-secondary {
@@ -7541,7 +7496,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-    border-color: #30638e!important
+    border-color: {{ site.color }}!important
 }
 
 .border-secondary {
@@ -10493,7 +10448,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-    color: #30638e!important
+    color: {{ site.color }}!important
 }
 
 a.text-primary:hover,
@@ -15748,7 +15703,7 @@ a.text-dark:focus {
 
 .-bg-primary {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .-bg-primary p>a {
@@ -15761,7 +15716,7 @@ a.text-dark:focus {
 }
 
 .-text-primary {
-    color: #30638e
+    color: {{ site.color }}
 }
 
 .-bg-secondary {
@@ -16072,7 +16027,7 @@ a.text-dark:focus {
 
 .-bg-1 {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .-bg-1 p>a {
@@ -16085,7 +16040,7 @@ a.text-dark:focus {
 }
 
 .-text-1 {
-    color: #30638e
+    color: {{ site.color }}
 }
 
 .-bg-2 {
@@ -16234,7 +16189,7 @@ a.text-dark:focus {
 
 .-bg-10 {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .-bg-10 p>a {
@@ -16247,7 +16202,7 @@ a.text-dark:focus {
 }
 
 .-text-10 {
-    color: #30638e
+    color: {{ site.color }}
 }
 
 .-bg-11 {
@@ -16391,7 +16346,7 @@ a.text-dark:focus {
 
 .td-box--1 {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .td-box--1 .td-arrow-down::before {
@@ -16400,7 +16355,7 @@ a.text-dark:focus {
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0;
-    border-color: #30638e transparent transparent transparent;
+    border-color: {{ site.color }} transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""
@@ -16416,10 +16371,10 @@ a.text-dark:focus {
 }
 
 .td-box--11.td-box--gradient {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x!important;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x!important
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x!important;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x!important
 }
 
 .td-box--2 {
@@ -16688,7 +16643,7 @@ a.text-dark:focus {
 
 .td-box--10 {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .td-box--10 .td-arrow-down::before {
@@ -16697,7 +16652,7 @@ a.text-dark:focus {
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0;
-    border-color: #30638e transparent transparent transparent;
+    border-color: {{ site.color }} transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""
@@ -16713,10 +16668,10 @@ a.text-dark:focus {
 }
 
 .td-box--110.td-box--gradient {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x!important;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x!important
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x!important;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x!important
 }
 
 .td-box--11 {
@@ -17249,7 +17204,7 @@ a.text-dark:focus {
 
 .td-box--primary {
     color: #fff;
-    background-color: #30638e
+    background-color: {{ site.color }}
 }
 
 .td-box--primary .td-arrow-down::before {
@@ -17258,7 +17213,7 @@ a.text-dark:focus {
     bottom: -25px;
     border-style: solid;
     border-width: 25px 30px 0;
-    border-color: #30638e transparent transparent transparent;
+    border-color: {{ site.color }} transparent transparent transparent;
     z-index: 3;
     position: absolute;
     content: ""
@@ -17274,10 +17229,10 @@ a.text-dark:focus {
 }
 
 .td-box--1primary.td-box--gradient {
-    background: #30638E -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to(#30638E)) repeat-x!important;
-    background: #30638e -webkit-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e -o-linear-gradient(top, #4f7a9f, #30638E) repeat-x!important;
-    background: #30638e linear-gradient(180deg, #4f7a9f, #30638E) repeat-x!important
+    background: {{ site.color }} -webkit-gradient(linear, left top, left bottom, from(#4f7a9f), to({{ site.color }})) repeat-x!important;
+    background: {{ site.color }} -webkit-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} -o-linear-gradient(top, #4f7a9f, {{ site.color }}) repeat-x!important;
+    background: {{ site.color }} linear-gradient(180deg, #4f7a9f, {{ site.color }}) repeat-x!important
 }
 
 .td-box--secondary {
@@ -17865,7 +17820,7 @@ a.text-dark:focus {
 }
 
 .td-navbar-cover {
-    background: #30638e
+    background: {{ site.color }}
 }
 
 @media(min-width:768px) {
@@ -17882,12 +17837,12 @@ a.text-dark:focus {
 }
 
 .navbar-bg-onscroll {
-    background: #30638e!important;
+    background: {{ site.color }}!important;
     opacity: inherit
 }
 
 .td-navbar {
-    background: #30638e;
+    background: {{ site.color }};
     min-height: 4rem;
     margin: 0;
     z-index: 32
@@ -18220,62 +18175,62 @@ html body .md-typeset .headerlink {
 
 .alert-primary {
     border-style: solid;
-    border-color: #30638e;
+    border-color: {{ site.color }};
     border-width: 0 0 0 4px
 }
 
 .alert-primary .alert-heading {
-    color: #30638e
+    color: {{ site.color }}
 }
 
 .alert-secondary {
+    border-style: solid;
+    border-color: #888;
+    border-width: 0 0 0 4px
+}
+
+.alert-secondary .alert-heading {
+    color: #888
+}
+
+.alert-success {
+    border-style: solid;
+    border-color: #13a733;
+    border-width: 0 0 0 4px
+}
+
+.alert-success .alert-heading {
+    color: #13a733;
+}
+
+.alert-info {
+    border-style: solid;
+    border-color: #479de7;
+    border-width: 0 0 0 4px
+}
+
+.alert-info .alert-heading {
+    color: #479de7;
+}
+
+.alert-warning {
+    border-style: solid;
+    border-color: #f7820a;
+    border-width: 0 0 0 4px
+}
+
+.alert-warning .alert-heading {
+    color: #f7820a
+}
+
+.alert-danger {
     border-style: solid;
     border-color: #d95040;
     border-width: 0 0 0 4px
 }
 
-.alert-secondary .alert-heading {
-    color: #d95040
-}
-
-.alert-success {
-    border-style: solid;
-    border-color: #3772ff;
-    border-width: 0 0 0 4px
-}
-
-.alert-success .alert-heading {
-    color: #3772ff
-}
-
-.alert-info {
-    border-style: solid;
-    border-color: #c0e0de;
-    border-width: 0 0 0 4px
-}
-
-.alert-info .alert-heading {
-    color: #c0e0de
-}
-
-.alert-warning {
-    border-style: solid;
-    border-color: #ed6a5a;
-    border-width: 0 0 0 4px
-}
-
-.alert-warning .alert-heading {
-    color: #ed6a5a
-}
-
-.alert-danger {
-    border-style: solid;
-    border-color: #ed6a5a;
-    border-width: 0 0 0 4px
-}
-
 .alert-danger .alert-heading {
-    color: #ed6a5a
+    color: #d95040
 }
 
 .alert-light {
@@ -18340,7 +18295,7 @@ html body .md-typeset .headerlink {
     padding: 0 0 0 1rem;
     margin-bottom: 1rem;
     color: #888;
-    border-left: 6px solid #d95040
+    border-left: 6px solid {{ site.color }}
 }
 
 .td-content>ul li,
@@ -18494,7 +18449,7 @@ html body .md-typeset .headerlink {
 
 .pageinfo-primary {
     border-style: solid;
-    border-color: #30638e
+    border-color: {{ site.color }}
 }
 
 .pageinfo-secondary {
