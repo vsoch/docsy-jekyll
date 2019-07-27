@@ -6,6 +6,93 @@ excluded_in_search: true
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i";
 @fa-font-path: "../webfonts";
 
+.gh-source {
+    display: block;
+    padding-right: 1.2rem;
+    transition: opacity .25s;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: white;
+    white-space: nowrap;
+}
+[dir=rtl] .gh-source {
+    padding-right: 0;
+    padding-left: 1.2rem;
+}
+.gh-source:hover {
+    opacity: .7;
+}
+.gh-source__icon+.gh-source__repository {
+    margin-left: -4.4rem;
+    padding-left: 4rem;
+}
+[dir=rtl] .gh-source__icon+.gh-source__repository {
+    margin-right: -4.4rem;
+    margin-left: 0;
+    padding-right: 4rem;
+    padding-left: 0;
+}
+.gh-source__repository {
+    display: inline-block;
+    max-width: 100%;
+    margin-left: 1.2rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.gh-source__facts {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    list-style-type: none;
+    opacity: .75;
+    overflow: hidden;
+}
+[data-md-state=done] .gh-source__facts {
+    -webkit-animation: md-source__facts--done .25s ease-in;
+    animation: md-source__facts--done .25s ease-in;
+}
+.gh-source__fact {
+    float: left;
+}
+[dir=rtl] .gh-source__fact {
+    float: right;
+}
+[data-md-state=done] .gh-source__fact {
+    -webkit-animation: md-source__fact--done .4s ease-out;
+    animation: md-source__fact--done .4s ease-out;
+}
+.gh-source__fact:before {
+    margin: 0 .2rem;
+    content: "\B7"}
+.gh-source__fact:first-child:before {
+    display: none;
+}
+.gh-source-file {
+    display: inline-block;
+    margin: 1em .5em 1em 0;
+    padding-right: .5rem;
+    border-radius: .2rem;
+    background-color: rgba(0, 0, 0, .07);
+    font-size: 1.28rem;
+    list-style-type: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.gh-source-file:before {
+    display: inline-block;
+    margin-right: .5rem;
+    padding: .5rem;
+    background-color: rgba(0, 0, 0, .26);
+    color: #fff;
+    font-size: 1.6rem;
+    content: "\E86F";
+    vertical-align: middle;
+}
+
+
 /*!* Bootstrap v4.1.3 (https://getbootstrap.com/)
 * Copyright 2011-2018 The Bootstrap Authors
 * Copyright 2011-2018 Twitter, Inc.
