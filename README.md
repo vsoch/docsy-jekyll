@@ -1,7 +1,5 @@
 # Docsy Jekyll Theme
 
-**under development**
-
 [![CircleCI](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master.svg?style=svg)](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master)
 
 ![assets/img/docsy-jekyll.png](assets/img/docsy-jekyll.png)
@@ -39,7 +37,7 @@ The top navigation is controlled by [_data/navigation.yml](_data/navigation.yml)
 ### 3. Options
 
 Most of the configuration values in the [_config.yml](_config.yml) are self explanatory,
-and for more details, see the [about page](https://vsoch.github.io/docsy-jekyll/about/)
+and for more details, see the [getting started page](https://vsoch.github.io/docsy-jekyll/docs/getting-started)
 rendered on the site.
 
 ### 4. Serve
