@@ -20,7 +20,6 @@ excluded_in_search: true
     padding-left: 1.2rem;
 }
 .gh-source:hover {
-    opacity: .7;
     color: yellow;
 }
 .gh-source__icon+.gh-source__repository {
