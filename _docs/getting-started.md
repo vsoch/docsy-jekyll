@@ -13,21 +13,17 @@ tags:
 
 
 On the right side of any page, you'll notice links to edit the page, or
-open an issue. The sections also have permalinks added.
-These are to ensure that a user is able to link someone else directly to a section
-of interest (Permalink), contribute a fix or suggestion to the documentation itself on GitHub
-(Edit this page) or open up an issue that links directly to where the user has
-the question. Documentation is hard, and sometimes unclear, and the site
-should make it easy to ask a question or suggest a change.
+open an issue. This ensures that any time you have a question or want to 
+suggest or request a change, you can do so immediately and link directly
+to the section of interest. The sections on the page also have permalinks so
+you can link directly to them.
 
 ### Search
 
 The entire site, including posts and documentation, is indexed and then available
-for search at the top of the page. Give it a try! The content is rendered
-from [this file](https://github.com/vsoch/mkdocs-jekyll/blob/master/search/search_index.json)
-into [this json data structure](https://vsoch.github.io/mkdocs-jekyll/search/search_index.json)
-that feeds into the search defined in `assets/js/application.js`. If you want to
-exclude any file from search, add this to its front end matter:
+for search at the top or side of the page. Give it a try! The content is rendered
+into window data that is used by lunr.js to generate the search results.
+If you want to exclude any file from search, add this to its front end matter:
 
 ```
 ---
@@ -36,7 +32,7 @@ excluded_in_search: true
 ---
 ```
 
-The example above is for a css file in the assets folder that is used as a template,
+The example above is for a javascript file in the assets folder that is used as a template,
 but should not be included in search.
 
 ### External Search
@@ -96,15 +92,6 @@ template to do the same based on the path to create a link:
 ```
 The path should be relative to the docs folder.
 
-#### Headers
-
-While this is a personal preference, it's recommended to create nesting 
-of your docs via markdown sections in each of the files
-over creating more files. For example, take a look at the right
-side of this page, and you'll see a level represented for each header.
-This strategy means that we have fewer overall pages (easier to find content)
-that are still browsable easily via search or the table of contents on the right.
-
 ### Pages
 
 The `pages` folder uses the same page layout, but is not part of the docs collection.
@@ -117,33 +104,30 @@ Whether you place your page under "pages" or "docs," for those pages that you wa
 you should add them to `_data/toc.yml`. If you've defined a `permalink` in the
 front end matter, you can use that (e.g., "About" below). If you haven't and
 want to link to docs, the url is the path starting with the docs folder.
-Here is an example of a flat structure:
+Here is an example (currently the active example):
 
 ```yaml
-  - title: "Getting Started"
-    url: "docs/getting-started/"
-  - title: "About"
-    url: "about"
-  - title: "News"
-    url: "news"
-```
-
-And here is an example with nested children (currently active in the example):
-
-```yaml
-  - title: "Getting Started"
-    url: "docs/getting-started"
-    children:
-      - title: Features
-        url: "docs/getting-started#features"
-      - title: Development
-        url: "docs/getting-started#development"
-      - title: Customization
-        url: "docs/getting-started#customization"
-  - title: "About"
-    url: "about"
-  - title: "News"
-    url: "news"
+- title: Documentation
+  url: docs
+  links:
+    - title: "Getting Started"
+      url: "docs/getting-started"
+      children:
+        - title: Features
+          url: "docs/getting-started#getting-started"
+        - title: Development
+          url: "docs/getting-started#development"
+        - title: Customization
+          url: "docs/getting-started#customization"
+    - title: "Extras"
+      url: "docs/extras"
+      children:
+        - title: Quizzes
+          url: "docs/extras/example-quiz"
+    - title: "About"
+      url: "about"
+    - title: "News"
+      url: "news
 ```
 
 If you want to add an external url for a parent or child, do this:
