@@ -11,9 +11,9 @@ tags:
 
 ### User Interaction
 
-If you look at any header field on the page, you'll notice three little dots 
-(called an elipsis) that if you mouse over, will open up to give you options
-for Permalink, Edit this Page, and Ask a Question. 
+
+On the right side of any page, you'll notice links to edit the page, or
+open an issue. The sections also have permalinks added.
 These are to ensure that a user is able to link someone else directly to a section
 of interest (Permalink), contribute a fix or suggestion to the documentation itself on GitHub
 (Edit this page) or open up an issue that links directly to where the user has

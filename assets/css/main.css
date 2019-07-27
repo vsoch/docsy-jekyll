@@ -17946,6 +17946,34 @@ a.text-dark:focus {
     min-width: 100px
 }
 
+.headerlink {
+    display: inline-block;
+    margin-left: 1rem;
+    -webkit-transform: translateY(.5rem);
+    transform: translateY(.5rem);
+    transition: color .25s, opacity .125s .25s, -webkit-transform .25s .25s;
+    transition: transform .25s .25s, color .25s, opacity .125s .25s;
+    transition: transform .25s .25s, color .25s, opacity .125s .25s, -webkit-transform .25s .25s;
+    opacity: 0;
+}
+[dir=rtl] .headerlink {
+    margin-right: 1rem;
+    margin-left: 0;
+}
+html body .md-typeset .headerlink {
+    color: rgba(0, 0, 0, .26);
+}
+
+.headerlink {
+  opacity: 0;
+}
+
+.headerlink:focus, .headerlink:hover {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1;
+}
+
 @media(max-width:991.98px) {
     .td-navbar {
         padding-right: .5rem;
