@@ -1,5 +1,6 @@
 ---
 title: A Nested Page
+description: An example of a nested page
 ---
 
 # A Nested Page

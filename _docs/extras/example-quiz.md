@@ -1,5 +1,6 @@
 ---
 title: Quiz
+description: How to add interactive quizzes to your site.
 ---
 
 # Quizzes
