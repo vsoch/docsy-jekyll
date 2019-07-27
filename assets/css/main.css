@@ -21,6 +21,7 @@ excluded_in_search: true
 }
 .gh-source:hover {
     opacity: .7;
+    color: yellow;
 }
 .gh-source__icon+.gh-source__repository {
     margin-left: -4.4rem;
