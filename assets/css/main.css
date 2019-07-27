@@ -5847,7 +5847,9 @@ input[type=button].btn-block {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: .25rem
+    border-radius: .25rem;
+    margin-right: 3px;
+    margin-bottom: 10px;
 }
 
 .badge:empty {
@@ -5879,7 +5881,7 @@ input[type=button].btn-block {
 
 .badge-secondary {
     color: #fff;
-    background-color: #d95040
+    background-color: #888
 }
 
 .badge-secondary[href]:hover,
@@ -5891,7 +5893,7 @@ input[type=button].btn-block {
 
 .badge-success {
     color: #fff;
-    background-color: #3772ff
+    background-color: #13a733;
 }
 
 .badge-success[href]:hover,
@@ -5902,8 +5904,8 @@ input[type=button].btn-block {
 }
 
 .badge-info {
-    color: #222;
-    background-color: #c0e0de
+    color: #fff;
+    background-color: #479de7
 }
 
 .badge-info[href]:hover,
@@ -5915,7 +5917,7 @@ input[type=button].btn-block {
 
 .badge-warning {
     color: #fff;
-    background-color: #ed6a5a
+    background-color: #f7820a;
 }
 
 .badge-warning[href]:hover,
@@ -5927,7 +5929,7 @@ input[type=button].btn-block {
 
 .badge-danger {
     color: #fff;
-    background-color: #ed6a5a
+    background-color: #d95040
 }
 
 .badge-danger[href]:hover,
