@@ -14,4 +14,5 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - adding site.url to config, making links in readme absolute (0.0.1)
  - start of theme  (0.0.0)
