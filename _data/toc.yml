@@ -15,7 +15,7 @@
       children:
         - title: Quizzes
           url: "docs/extras/example-quiz"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"
+- title: "About"
+  url: "about"
+- title: "News"
+  url: "news"
