@@ -55,8 +55,8 @@ color: "#30638e"
 # Build settings
 markdown: kramdown
 
-# If you add tags to pages, you can link them to some external search
-# If you want to disable this, comment the URL.
+# If you add tags to pages, define this variable to link them to some external search
+# If you want to link to tags locally on the site, comment this out.
 tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
 tag_color: primary # danger, success, warning, primary, info, secondary
 
