@@ -353,8 +353,7 @@ and then add them to the navigation by adding to the content of [_data/toc.yml](
 
 #### Tags
 
-If you include tags on a page, by default they won't link to anything. However,
-if you define a `tag_search_endpoint` url in your configuration file, by clicking
+If you include tags on a page, by default they will link to the [tags page]({{ site.url }}{{ site.baseurl }}/tags) on the site. However, if you define a `tag_search_endpoint` url in your configuration file, by clicking
 the tag, the user will be taken to this page to search for it. As an example,
 we define the current search endpoint to be Ask Cyberinfrastructure, and
 page tags link to a search on it:
@@ -375,4 +374,11 @@ tags:
 ```
 
 They are appended to the first h1 block, so generally your pages should have a header.
+If you comment out this variable, then each of your tags will link to it's appropriate
+spot on the tags page linked above.
+
+```yaml
+#tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
+tag_color: primary # danger, success, warning, primary, info, secondary
+```
 
