@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - minimum width of 150px for top right site name (0.0.13)
  - tags page and option to link to it from post/docs tags (0.0.12)
  - adding search endpoint tags to docs (0.0.11)
  - adding site.url to config, making links in readme absolute (0.0.1)
