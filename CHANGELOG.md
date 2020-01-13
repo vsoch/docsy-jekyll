@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - bug that news items (posts) don't render in search (0.0.14)
  - minimum width of 150px for top right site name (0.0.13)
  - tags page and option to link to it from post/docs tags (0.0.12)
  - adding search endpoint tags to docs (0.0.11)
