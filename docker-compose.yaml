@@ -1,0 +1,9 @@
+
+version: '3.7'
+services:
+  site:
+    container_name: docsy
+    command: jekyll serve --watch --drafts
+    image: jekyll/jekyll:latest
+    volumes: [".:/srv/jekyll"]
+    ports: ["4000:4000"]
