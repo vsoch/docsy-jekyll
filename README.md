@@ -55,9 +55,11 @@ bundle exec jekyll serve
 
 ### 4. Run as a container in dev or prod
 
-no installations required but [docker-ce](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/)
+No installations required but [docker-ce](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/)
 
 ```bash
 docker-compose up -d
 ```
 Application will now server on [http://localhost:4000](http://localhost:4000)
+
+> Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
