@@ -61,7 +61,8 @@ If you want to run docsy jekyll via a container for development (dev) or product
 
 #### Customization
 
-Note that the [docker-compose.yml](docker-compose.yml) file is using the [jekyll/jekyll:latest](https://hub.docker.com/r/jekyll/jekyll/tags) image. If you want to make your build more reproducible, you can specify a particular version for jekyll (tag). Note that at the development time of writing this documentation, latest was tag 4.0.0.
+Note that the [docker-compose.yml](docker-compose.yml) file is using the [jekyll/jekyll:3.8](https://hub.docker.com/r/jekyll/jekyll/tags) image. If you want to make your build more reproducible, you can specify a particular version for jekyll (tag). Note that at the development time of writing this documentation, the latest was tag 4.0.0,
+and it [had a bug](https://github.com/fastai/fastpages/issues/267#issuecomment-620612896) that prevented the server from deploying.
 
 If you are deploying a container to production, you should remove the line to
 mount the bundles directory to the host in the docker-compose.yml. Change:
@@ -81,7 +82,11 @@ to:
 ```
 
 This additional volume is optimal for development so you can cache the bundle dependencies,
-but should be removed for production. Once your docker-compose to download the base container and bring up the server:
+but should be removed for production. 
+
+#### Start Container
+
+Once your docker-compose to download the base container and bring up the server:
 
 ```bash
 docker-compose up -d
