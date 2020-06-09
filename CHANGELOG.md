@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - adding breadcrumb link to documentation root (0.0.16)
  - bug with link in top breadcrumb (404) missing baseurl (0.0.15)
  - bug that news items (posts) don't render in search (0.0.14)
  - minimum width of 150px for top right site name (0.0.13)
