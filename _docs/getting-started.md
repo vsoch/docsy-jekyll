@@ -284,7 +284,7 @@ You should first fork the repository to your GitHub organization or username,
 and then clone it.
 
 ```bash
-$ git clone https://github.com/<username</mkdocs-jekyll.git docs
+$ git clone https://github.com/<username>/mkdocs-jekyll.git docs
 $ cd docs
 ```
 
