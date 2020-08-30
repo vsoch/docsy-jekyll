@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - use jquery locally, in case that jquery is unreachable in some places (0.0.18)
  - hiding sidebar links to reflect parent functionality (0.0.17)
  - adding breadcrumb link to documentation root (0.0.16)
  - bug with link in top breadcrumb (404) missing baseurl (0.0.15)
