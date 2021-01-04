@@ -11,5 +11,5 @@ native deployment on GitHub pages. See the [respository]({{ site.repo }}) for mo
 
 ## Support
 
-If you need help, please don't hesitate to [open an issue](https://www.github.com/{{ site.github_repo }}/{{ site.github_user }}).
+If you need help, please don't hesitate to [open an issue](https://www.github.com/{{ site.github_user }}/{{ site.github_repo }}).
 
