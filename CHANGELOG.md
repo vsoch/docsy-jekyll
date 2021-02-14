@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - updating repository with copyright notice (0.0.2)
  - fixing link to repository in about.md (0.0.19)
  - use jquery locally, in case that jquery is unreachable in some places (0.0.18)
  - hiding sidebar links to reflect parent functionality (0.0.17)
