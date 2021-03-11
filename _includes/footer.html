@@ -3,13 +3,20 @@
     <div class="row">
       <div class="col-6 col-sm-4 text-xs-center order-sm-2">
         
-{% if site.twitter %}<ul class="list-inline mb-0">  
+<ul class="list-inline mb-0">  
+  {% if site.twitter %}
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Twitter" data-original-title="Twitter">
     <a class="text-white" target="_blank" href="https://twitter.com/{{ site.twitter }}">
       <i class="fab fa-twitter"></i>
     </a>
-  </li>
-</ul>{% endif %}
+  </li>{% endif %}
+  {% if site.linkedin %}
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="LinkedIn" data-original-title="LinkedIn">
+    <a class="text-white" target="_blank" href="https://linkedin.com/in/{{ site.linkedin }}">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>{% endif %}
+</ul>
 </div>
 <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
 <ul class="list-inline mb-0">  
