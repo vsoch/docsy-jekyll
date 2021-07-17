@@ -12,7 +12,6 @@ but can further enhance your documentation pages. Currently, we have support
 for adding interactive quizzes.
 
  - [Quizzes](example-quiz)
+ - [Tags]({{ site.baseurl }}/tags/)
 
-
-Would you like to see another question type, or another kind of extra? Please
-[open an issue])({{ site.repo }}/issues/new).
+Would you like to see another question type, or another kind of extra? Please [open an issue]({{ site.repo }}/issues/new).
