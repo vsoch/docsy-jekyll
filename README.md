@@ -53,6 +53,9 @@ jekyll serve
 bundle exec jekyll serve
 ```
 
+**NOTE:** If the above serve command throws error saying `require': cannot load such file -- webrick (LoadError)` try to run `bundle add webrick` (adds webrick gem to the Gemfile) and then run the serve command again.
+
+
 ### 5. Run as a container in dev or prod
 
 #### Software Dependencies
