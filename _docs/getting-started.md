@@ -50,6 +50,12 @@ Documentation pages should be written in the `docs` folder of the repository,
 and you are allowed to use whatever level of nesting (subfolders) that 
 works for you! It's a Jekyll [collection](https://jekyllrb.com/docs/collections/), which means that you
 can add other content (images, scripts) and it will be included for linking to.
+To create subfolders with files, you can simply create new markdon files. For example:
+
+ - `_docs/subfolder/example-page.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/example-page/`
+ - `_docs/subfolder.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/`
+
+And the page you are reading now renders from `_docs/getting-started.md`
 
 #### Organization
 
@@ -78,7 +84,7 @@ getting started page for sherlock:
 ```
 
 [Here](example-page) is an example link to a relative path of a file (`example-page.md`)
-in the same directory, and from that page you can test linking to a subfoldr.
+in the same directory, and from that page you can test linking to a subfolder.
 In the case of not having a subfolder, we could write the link out directly:
 
 ```

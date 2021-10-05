@@ -1,9 +1,9 @@
 ---
-title: A Nested Page
-description: An example of a nested page in a subfolder.
+title: The Subfolder Page
+description: An example of a subfolder page.
 ---
 
-# A Nested Page
+# A Subfolder Page.
 
 This is an example of a page that doesn't have a permalink defined, and
 is not included in the table of contents (`_data/toc.yml`).

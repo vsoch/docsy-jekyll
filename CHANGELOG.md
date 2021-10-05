@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - adding more verbose example for subfolders (0.0.24)
  - sidebar fix to support multiple top level menus (0.0.23)
  - added support for github_branch (default 'master') in config (0.0.22)
  - adding support in footer to icon and link to linkedin url (0.0.21)
