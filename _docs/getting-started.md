@@ -52,7 +52,7 @@ works for you! It's a Jekyll [collection](https://jekyllrb.com/docs/collections/
 can add other content (images, scripts) and it will be included for linking to.
 To create subfolders with files, you can simply create new markdon files. For example:
 
- - `_docs/subfolder/example-page` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/example-page/`
+ - `_docs/subfolder/example-page.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/example-page/`
  - `_docs/subfolder.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/`
 
 And the page you are reading now renders from `_docs/getting-started.md`
