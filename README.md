@@ -8,7 +8,6 @@
 
 ![https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png](https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png)
 
-
 ## Description
 
 This is a [starter template](https://vsoch.github.io/docsy-jekyll/) for a Docsy Jekyll theme, based on the beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. This version is intended for native deployment on [GitHub Pages](https://guides.github.com/features/pages/). The original [Apache License](https://github.com/vsoch/docsy-jekyll/blob/master/LICENSE) is included.
@@ -21,10 +20,8 @@ The Docsy Jekyll theme is designed to:
 5. Posts are provided via a feed
 6. Docsy Jekyll has support for basic quizzes
 7. 
- 
 
 ## Prerequisites  
-
 
 Before you start, you should have installed:  
 1. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
@@ -35,15 +32,13 @@ Before you start, you should have installed:
 
 **NOTE**: The `how to install...` links above for Ruby and Jekyll describe installation on all three major platforms, MacOS, Linux, and Windows.
 
-
 ## Installation
-
 
 NOTE: Specific instructions for MacOS and Ubuntu are described below.
 
 **OSX**, you will also need to setup [Brew](https://brew.sh/), which is a package manager for OSX. To install Brew and Git, run the following commands:
 
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install git
 ```
@@ -181,6 +176,3 @@ to see the server running.
 > Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
 
 ## Changes
-
-
-
