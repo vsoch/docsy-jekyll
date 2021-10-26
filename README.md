@@ -91,6 +91,80 @@ is useful for business or similar, this author (@vsoch) preferred to have
 the main site page go directly to the Documentation view. Posts
 are still provided via a feed.
 
+## Description
+
+Docsy Jekyll is a theme for the static site generator Jekyll, primarily designed to:
+1. Render your documentation
+2. Display your News (aka Posts)
+3. Run on [GitHub Pages](https://guides.github.com/features/pages/)
+4. Allow users to contribute easily to your work or documentation. 
+
+## Prerequisites  
+
+Before you start, you should have installed:  
+1. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+2. Jekyll: [how to install Jekyll](https://jekyllrb.com/docs/installation/)
+3. Bundler: [how to install Bundler](https://bundler.io/)
+4. Git: [how to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+5. You will need a GitHub account. We assume you have one.
+
+**NOTE**: The `how to install...` links above for Ruby and Jekyll describe installation on all three major platforms, MacOS, Linux, and Windows.
+
+## Installation
+
+NOTE: Specific instructions for MacOS and Ubuntu are described below.
+
+**OSX**, you will also need to setup [Brew](https://brew.sh/) which is a package manager for OSX. To install Brew and Git, run the following commands:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install git
+```
+
+Followed by
+```bash
+brew install ruby
+gem install jekyll
+gem install bundler
+bundle install
+```
+
+**Ubuntu** has an equivalent method
+
+```bash
+# Ruby
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+rbenv install 2.3.1
+rbenv global 2.3.1
+gem install bundler
+rbenv rehash
+ruby -v
+
+# Rails
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+gem install rails -v 4.2.6
+rbenv rehash
+
+# Jekyll
+gem install jekyll
+gem install github-pages
+gem install jekyll-sass-converter
+
+rbenv rehash
+```
+
+A simple installion from the **Ubuntu** repositories works as well.
+
+```bash
+sudo apt install ruby
+sudo apt  install jekyll
+sudo apt  install bundler
+```
+
+
 ## Usage
 
 
