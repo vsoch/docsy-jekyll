@@ -8,20 +8,22 @@
 
 ![https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png](https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png)
 
+
 ## Description
 
-This is a [starter template](https://vsoch.github.io/docsy-jekyll/) for a Docsy Jekyll theme, based on the beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. This version is intended for native deployment on [GitHub Pages](https://guides.github.com/features/pages/). The original [Apache License](https://github.com/vsoch/docsy-jekyll/blob/master/LICENSE) is included.
+This is a [starter template](https://vsoch.github.com/docsy-jekyll/) for a Docsy jekyll theme, based
+on the beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. This version is intended for
+native deployment on GitHub pages. The original [Apache License](https://github.com/vsoch/docsy-jekyll/blob/master/LICENSE) is included.
 
-The Docsy Jekyll theme is designed to:
-1. Render your Documentation 
+1. Render your documentation
 2. Display your News (aka Posts)
 3. Run on [GitHub Pages](https://guides.github.com/features/pages/)
-4. Allow users to contribute easily to your work or documentation 
-5. Posts are provided via a feed
-6. Docsy Jekyll has support for basic quizzes
-7. 
+4. Allow users to contribute easily to your work or documentation.
+5.
+
 
 ## Prerequisites  
+
 
 Before you start, you should have installed:  
 1. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
@@ -32,9 +34,11 @@ Before you start, you should have installed:
 
 **NOTE**: The `how to install...` links above for Ruby and Jekyll describe installation on all three major platforms, MacOS, Linux, and Windows.
 
+
 ## Installation
 
-NOTE: Specific instructions for MacOS and Ubuntu are described below.
+
+NOTE: Specific instructions for only MacOS and Ubuntu are described below.
 
 **OSX**, you will also need to setup [Brew](https://brew.sh/), which is a package manager for OSX. To install Brew and Git, run the following commands:
 
@@ -52,6 +56,12 @@ bundle install
 ```
 
 **Ubuntu** has an equivalent method
+
+If you are on Debian/Ubuntu, then you can easily install git with apt-get.
+```bash
+# Git
+apt-get update && apt-get install -y git
+```
 
 ```bash
 # Ruby
@@ -86,10 +96,6 @@ sudo apt install jekyll
 sudo apt install bundler
 ```
 
-The site is intended for purely documentation, so while the front page banner
-is useful for business or similar, this author (@vsoch) preferred to have
-the main site page go directly to the Documentation view. Posts
-are still provided via a feed.
 
 ## Description
 
@@ -114,7 +120,7 @@ Before you start, you should have installed:
 
 NOTE: Specific instructions for MacOS and Ubuntu are described below.
 
-**OSX**, you will also need to setup [Brew](https://brew.sh/) which is a package manager for OSX. To install Brew and Git, run the following commands:
+**OSX**, you will also need to setup [Brew](https://brew.sh/), which is a package manager for OSX. To install Brew and Git, run the following commands:
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -250,3 +256,9 @@ to see the server running.
 > Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
 
 ## Changes
+
+The site is intended for purely documentation, so while the front page banner
+is useful for business or similar, this author (@vsoch) preferred to have
+the main site page go directly to the Documentation view. Posts
+are still provided via a feed.
+
