@@ -3,10 +3,11 @@ title: Quiz
 description: How to add interactive quizzes to your site.
 ---
 
+As of version 0.0.12, docsy-jekyll has support for basic quizzes! 
+- The quiz answers are not saved or graded.
+
 # Quizzes
 
-As of version 0.0.12, docsy-jekyll has support for basic quizzes! These are
-intended to help educate your users about the content of your documentation.
 For a quiz, you can add a new file to the folder `_data/quizzes`, and write a 
 questions file based on the format shown in `_data/quizzes/example-quiz.yml`.
 Here is a simple example of a multiple choice question (which can also serve as 
