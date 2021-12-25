@@ -1,5 +1,5 @@
-title: This is the Quiz Title
-randomized: false
+title: Quiz Title
+randomized: true # Boolean
 questions:
 
  - type: "multiple-choice"
