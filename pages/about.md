@@ -10,7 +10,7 @@ Docsy Jekyll is intended for deployment on GitHub pages.
 
 See the [respository]({{ site.repo }}) for more details.
 
-Docsy is based on the beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. 
+Docsy Jekyll is based on the beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. 
 Hugo is not native to Github pages.
 
 ## Support
