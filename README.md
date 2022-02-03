@@ -19,17 +19,22 @@ This version allows one to:
 4. Allow users to contribute more easily to your work/documentation
 5. Produce quizzes
 6. Display code snippets
+7. Search
+8. Have Tags or Categories
+9. Use multiple folders and nested folders
+10. Notification buttons
+11. Have top and left-hand banners, containing folders and top-level categories
 
 
 ## 2. Prerequisites  
 
 - Before you start, you should have installed:  
 - 
-1. Git: [how to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-3. Jekyll: [how to install Jekyll](https://jekyllrb.com/docs/installation/)
-4. Bundler: [how to install Bundler](https://bundler.io/)
-5. You will need a GitHub account, which we assume you have.
+1. You will need a GitHub account, which we assume you have.
+2. Git: [how to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+3. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+4. Jekyll: [how to install Jekyll](https://jekyllrb.com/docs/installation/)
+5. Bundler: [how to install Bundler](https://bundler.io/)
 
 **NOTE**: The `How to install...` links above describe installation on three platforms, MacOS, Linux, and Windows.
 
