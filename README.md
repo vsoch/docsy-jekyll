@@ -31,10 +31,10 @@ This version allows one to:
 - Before you start, you should have installed:  
 
 1. You will need a GitHub account, which we assume you have.
-2. Git: [how to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-3. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-4. Jekyll: [how to install Jekyll](https://jekyllrb.com/docs/installation/)
-5. Bundler: [how to install Bundler](https://bundler.io/)
+2. Git: [How to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+3. Ruby: [How to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+4. Jekyll: [How to install Jekyll](https://jekyllrb.com/docs/installation/)
+5. Bundler: [How to install Bundler](https://bundler.io/)
 
 **NOTE**: The `How to install...` links above describe installation on three platforms, MacOS, Linux, and Windows.
 
@@ -43,9 +43,9 @@ This version allows one to:
 
 ### 3.1 Windows
 
-See [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
+**See** [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
 
-NOTE: See the link above for specific instructions
+**NOTE**: See the link above for specific instructions
 
 But Generally, 
 
