@@ -29,7 +29,7 @@ This version allows one to:
 ## 2. Prerequisites  
 
 - Before you start, you should have installed:  
-- 
+
 1. You will need a GitHub account, which we assume you have.
 2. Git: [how to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 3. Ruby: [how to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
@@ -42,6 +42,17 @@ This version allows one to:
 ## 3. Installation
 
 ### 3.1 Windows
+
+See [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
+
+NOTE: See the link above for specific instructions
+
+But Generally, 
+
+1. Download and install a Ruby+Devkit version from [RubyInstaller Downloads](https://rubyinstaller.org/downloads/). Use default options for installation.
+2. Run the `ridk install` step on the last stage of the installation wizard.
+3. Open Windows Powershell. Install Jekyll and Bundler using gem install jekyll bundler making sure it is in your **PATH**
+4. Use: `jekyll -v` , to check if Jekyll has been installed properly.
 
 ### 3.2 Ubuntu
 
