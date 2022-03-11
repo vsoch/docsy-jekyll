@@ -1,35 +1,124 @@
 # Docsy Jekyll Theme
 
+
 [![CircleCI](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master.svg?style=svg)](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master)
 <a href="https://jekyll-themes.com/docsy-jekyll/">
     <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
-![https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png](https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png)
+## 1. Description
 
-This is a [starter template](https://vsoch.github.com/docsy-jekyll/) for a Docsy jekyll theme, based
-on the Beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. This version is intended for
-native deployment on GitHub pages. The original [Apache License](https://github.com/vsoch/docsy-jekyll/blob/master/LICENSE) is included.
+- This is a [starter template](https://vsoch.github.com/docsy-jekyll/) for a Docsy-like jekyll theme, based on Google's [Docsy](https://github.com/google/docsy) that renders with Hugo. The original [Apache License can be found here.](https://github.com/vsoch/docsy-jekyll/blob/master/LICENSE)
 
-## Changes
+- This version is intended for GitHub pages deployment that uses Jekyll. 
 
-The site is intended for purely documentation, so while the front page banner
-is useful for business or similar, this author (@vsoch) preferred to have
-the main site page go directly to the Documentation view. Posts
-are still provided via a feed.
+This version allows one to:
+1. Render your documentation
+2. Display your News (aka Posts)
+3. Run on [GitHub Pages](https://guides.github.com/features/pages/)
+4. Allow users to contribute more easily to your work/documentation
+5. Produce quizzes
+6. Display code snippets
+7. Search
+8. Have Tags or Categories
+9. Use multiple folders and nested folders
+10. Notification buttons
+11. Have top and left-hand banners, containing folders and top-level categories
 
-## Usage
 
-### 1. Get the code
+## 2. Prerequisites  
 
-You can clone the repository right to where you want to host the docs:
+- Before you start, you should have installed:  
+
+1. You will need a GitHub account, which we assume you have.
+2. Git: [How to install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+3. Ruby: [How to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+4. Jekyll: [How to install Jekyll](https://jekyllrb.com/docs/installation/)
+5. Bundler: [How to install Bundler](https://bundler.io/)
+
+**NOTE**: The `How to install...` links above describe installation on three platforms, MacOS, Linux, and Windows.
+
+
+## 3. Installation
+
+### 3.1 Windows
+
+**See** [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
+
+**NOTE**: See the link above for specific instructions
+
+But Generally, 
+
+1. Download and install a Ruby+Devkit version from [RubyInstaller Downloads](https://rubyinstaller.org/downloads/). Use default options for installation.
+2. Run the `ridk install` step on the last stage of the installation wizard.
+3. Open Windows Powershell. Install Jekyll and Bundler using gem install jekyll bundler making sure it is in your **PATH**
+4. Use: `jekyll -v` , to check if Jekyll has been installed properly.
+
+### 3.2 Ubuntu
 
 ```bash
-git clone https://github.com/vsoch/docsy-jekyll.git docs
-cd docs
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install git
 ```
 
-### 2. Customize
+Followed by
+```bash
+brew install ruby
+gem install jekyll
+gem install bundler
+bundle install
+```
+
+```bash
+# Ruby
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+rbenv install 2.3.1
+rbenv global 2.3.1
+gem install bundler
+rbenv rehash
+ruby -v
+
+# Rails
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+gem install rails -v 4.2.6
+rbenv rehash
+
+# Jekyll
+gem install jekyll
+gem install github-pages
+gem install jekyll-sass-converter
+
+rbenv rehash
+```
+
+A simple installion from the **Ubuntu** repositories works as well.
+
+```bash
+sudo apt install ruby
+sudo apt install jekyll
+sudo apt install bundler
+```
+
+
+## 4. Getting the Docsy Jekyll theme code
+
+- There are several ways to get started with the Docsy-Jekyll software:
+
+### 4.1 Download .zip file from GitHub
+
+Go to the GitHub repository and download the .zip file containing the code.
+
+### 4.2 Obtain URL address for GitHub repo
+
+```bash
+git clone https://github.com/vsoch/docsy-jekyll.git folder_name
+cd folder_name
+```
+
+### 5. Customization of code for personal use:
 
 To edit configuration values, customize the [_config.yml](https://github.com/vsoch/docsy-jekyll/blob/master/_config.yml).
 To add pages, write them into the [pages](https://github.com/vsoch/docsy-jekyll/blob/master/pages) folder. 
@@ -37,13 +126,13 @@ You define urls based on the `permalink` attribute in your pages,
 and then add them to the navigation by adding to the content of [_data/toc.myl](https://github.com/vsoch/docsy-jekyll/blob/master/_data/toc.yml).
 The top navigation is controlled by [_data/navigation.yml](https://github.com/vsoch/docsy-jekyll/blob/master/_data/navigation.yml)
 
-### 3. Options
+5.1 Options
 
 Most of the configuration values in the [_config.yml](https://github.com/vsoch/docsy-jekyll/blob/master/_config.yml) are self explanatory,
 and for more details, see the [getting started page](https://vsoch.github.io/docsy-jekyll/docs/getting-started)
 rendered on the site.
 
-### 4. Serve
+5.2 Serve
 
 Depending on how you installed jekyll:
 
@@ -53,49 +142,5 @@ jekyll serve
 bundle exec jekyll serve
 ```
 
-**NOTE:** If the above serve command throws an error saying `require': cannot load such file -- webrick (LoadError)` try to run `bundle add webrick` to automatically add the webrick gem to your Gemfile, or manually add `gem "webrick"` line to the Gemfile and then run the serve command again.
 
 
-### 5. Run as a container in dev or prod
-
-#### Software Dependencies
-
-If you want to run docsy jekyll via a container for development (dev) or production (prod) you can use containers. This approach requires installing [docker-ce](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/). 
-
-#### Customization
-
-Note that the [docker-compose.yml](docker-compose.yml) file is using the [jekyll/jekyll:3.8](https://hub.docker.com/r/jekyll/jekyll/tags) image. If you want to make your build more reproducible, you can specify a particular version for jekyll (tag). Note that at the development time of writing this documentation, the latest was tag 4.0.0,
-and it [had a bug](https://github.com/fastai/fastpages/issues/267#issuecomment-620612896) that prevented the server from deploying.
-
-If you are deploying a container to production, you should remove the line to
-mount the bundles directory to the host in the docker-compose.yml. Change:
-
-```yaml
-    volumes: 
-      - "./:/srv/jekyll"
-      - "./vendor/bundle:/usr/local/bundle"
-      # remove "./vendor/bundle:/usr/local/bundle" volume when deploying in production
-```
-
-to:
-
-```yaml
-    volumes: 
-      - "./:/srv/jekyll"
-```
-
-This additional volume is optimal for development so you can cache the bundle dependencies,
-but should be removed for production. 
-
-#### Start Container
-
-Once your docker-compose to download the base container and bring up the server:
-
-```bash
-docker-compose up -d
-```
-
-You can then open your browser to [http://localhost:4000](http://localhost:4000)
-to see the server running.
-
-> Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
