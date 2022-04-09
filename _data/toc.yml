@@ -2,13 +2,13 @@
   url: docs
   links:
     - title: "Java"
-      url: "docs/java_doc"
+      url: "docs/java_doc_01"
       children:
-        - title: 자바를 시작하기 전에
-          url: "docs/java_doc#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
+        - title: 1.자바를 시작하기 전에
+          url: "docs/java_doc_01"
+        - title: 2.변수 Variable
+          url: "docs/java_doc_01"
+        - title: 3.미정
           url: "docs/getting-started#customization"
     - title: "About"
       url: "about"
