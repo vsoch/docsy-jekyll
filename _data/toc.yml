@@ -4,17 +4,17 @@
     - title: "Java"
       url: "docs/java_doc_01"
       children:
-        - title: 1.자바를 시작하기 전에
+        - title: "1.자바를 시작하기 전에"
           url: "docs/java_doc_01"
-        - title: 2.변수 Variable
+        - title: "2.변수 Variable"
           url: "docs/java_doc_02"
-        - title: 3.연산자
+        - title: "3.연산자"
           url: "docs/java_doc_03"
-        - title: 4.조건문과 반복문
+        - title: "4.조건문과 반복문"
           url: "docs/java_doc_04"
-        - title: 5.배열 array
+        - title: "5.배열 array"
           url: "docs/java_doc_05"
-        - title: 6.객체지향프로그래밍1
+        - title: "6.객체지향프로그래밍1"
           url: "docs/java_doc_06"
     - title: "About"
       url: "about"
