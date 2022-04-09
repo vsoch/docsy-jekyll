@@ -1,6 +1,8 @@
 - title: Documentation
   url: docs
   links:
+    - title: "Getting Started2"
+      url: "docs/getting-started2"
     - title: "Getting Started"
       url: "docs/getting-started"
       children:
