@@ -2,10 +2,10 @@
   url: docs
   links:
     - title: "Java"
-      url: "docs/getting-started"
+      url: "docs/java_doc"
       children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
+        - title: 자바를 시작하기 전에
+          url: "docs/java_doc#getting-started"
         - title: Development
           url: "docs/getting-started#development"
         - title: Customization
