@@ -1,9 +1,7 @@
 - title: Documentation
   url: docs
   links:
-    - title: "Getting Started2"
-      url: "docs/getting-started2"
-    - title: "Getting Started"
+    - title: "Java"
       url: "docs/getting-started"
       children:
         - title: Features
@@ -16,10 +14,10 @@
       url: "about"
     - title: "News"
       url: "news"
-- title: "Extras"
-  url: "docs/extras"
-  links:
-    - title: Quizzes
-      url: "docs/extras/example-quiz"
-    - title: Tags Page
-      url: "tags"
+#- title: "Extras"
+#  url: "docs/extras"
+#  links:
+#    - title: Quizzes
+#      url: "docs/extras/example-quiz"
+#    - title: Tags Page
+#      url: "tags"
