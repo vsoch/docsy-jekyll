@@ -4,10 +4,10 @@
     - title: "Java"
       url: "docs/java_doc"
       children:
-        - title: 자바를 시작하기 전에
-          url: "docs/java_doc#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
+        - title: capter1.자바를 시작하기 전에
+          url: "docs/java_doc_01#1-자바java-programming-language"
+        - title: capter2.변수 Variable
+          url: "docs/java_doc_02#1-변수"
         - title: Customization
           url: "docs/getting-started#customization"
     - title: "About"
