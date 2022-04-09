@@ -4,7 +4,7 @@
     - title: "Java"
       url: "docs/java_doc_01"
       children:
-        - title: "1.자바를 시작하기 전에"
+        - title: "1.자바를 시작하기 전에."
           url: "docs/java_doc_01"
         - title: "2.변수 Variable"
           url: "docs/java_doc_02"
@@ -27,3 +27,4 @@
 #      url: "docs/extras/example-quiz"
 #    - title: Tags Page
 #      url: "tags"
+
