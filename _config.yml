@@ -39,6 +39,14 @@ twitter: vsoch
 linkedin: vsochat
 dockerhub: vanessa
 
+version_params:
+  version_menu: "Release"
+  versioning: true
+  latest: Current
+  versions:
+    - Current
+    - Previous
+
 # Should there be feedback buttons at the bottom of pages?
 feedback: true
 

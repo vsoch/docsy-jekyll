@@ -11,6 +11,27 @@
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
                             <a class="nav-link" href="{% if link.url %}{{ site.baseurl }}/{{ link.url }}{% else %}{{ link.external_url }}{% endif %}" ><span>{{ link.title }}</span></a>
 			</li>{% endfor %}
+      {% if site.version_params.versioning == true %}
+        {% if site.version_params.version_menu != '' %}
+          <span class="nav-link ">{{site.version_params.version_menu}}:</span>
+        {% endif %}
+        <li class="nav-item dropdown d-none d-lg-block">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ currentpageversion }}</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {% for version in site.version_params.versions %}
+            {% capture civersion %}
+              {{ version | downcase}}
+            {% endcapture %}
+              {% if version == site.version_params.latest %}
+                <a class="dropdown-item" href="{{ site.baseurl }}{{ latestversion }}">{{version}}</a>
+              {% else %}
+                {% assign versionlink = '/docs/' | append: version | append: '/' %}
+                <a class="dropdown-item" href="{{ site.baseurl }}{{ latestversion | replace: '/docs/', versionlink }}">{{version}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </li>
+      {% endif %}
 		</ul>
 	</div>
 	<div class="navbar-nav d-none d-lg-block">
