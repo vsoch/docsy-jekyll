@@ -53,7 +53,7 @@
                     </li>
                   {% else %}
                     {% if page.url != "/docs/" %}
-                      {% if site.version_params.versioning == true and (crumb == currentpageversion or crumb == site.version_params.version_dir) %}
+                      {% if site.version_params.versioning == true and crumb == currentpageversion or crumb == site.version_params.version_dir %}
                       <!-- Don't display the version number or directory in the breadcrumb -->
                       {% else %}
                       <li class="breadcrumb-item">
