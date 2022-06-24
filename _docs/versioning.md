@@ -12,7 +12,7 @@ Versioning documentation is a useful feature that can be achieved using Docsy Je
 
 ## Implementation
 
-The way in which versioning is achieved is by duplicating your whole document directory and placing it inside a subdirectory with the name of that version. The following illustrates what the base document root looks like without another version for this Docsy Jekyll site.
+The way in which versioning is achieved is by duplicating your whole document directory and placing it inside an 'archive' subdirectory with the name of that version. The following illustrates what the base document root looks like without another version for this Docsy Jekyll site.
 
 ```
 document root
@@ -26,7 +26,7 @@ document root
         subfolder.md
         versioning.md
 ```
-To create an older version of this documentation we first create a folder with the version name we want to use and copy all the files and folders from our root _docs folder into that new folder, we therefore end up with a structure such as below where we moved the older documentation into the folder 'Previous'. Once we have done that we effectively have taken a snapshot of our documents at a point in time and will no longer maintain these. If you look at the structure of this site you will see the 'Previous' folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release.
+To create a version of this documentation we first create a folder with the version name we want to use inside of the 'archive' folder and copy all the files and folders from our root _docs folder into that new folder, we therefore end up with a structure such as below where we moved the older documentation into the folder 'Previous'. Once we have done that we effectively have taken a snapshot of our documents at a point in time and will no longer maintain these. If you look at the structure of this site you will see the 'Previous' folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release.
 
 <pre><code>
 document root
@@ -35,12 +35,13 @@ document root
 └─── _docs
         └─── extras
         └─── subfolder
-        └─── <span style="color:blue;"><b>Previous</b></span>
-            └─── extras
-            └─── subfolder
-            example-page.md
-            getting-started.md
-            subfolder.md
+        └─── Archive
+              └─── <span style="color:blue;"><b>Previous</b></span>
+                  └─── extras
+                  └─── subfolder
+                  example-page.md
+                  getting-started.md
+                  subfolder.md
         example-page.md
         getting-started.md
         subfolder.md
@@ -49,13 +50,14 @@ document root
 
 You would now continue to add, update or remove markdown files from the main _docs directory in order to work on the current version of your documentation. 
 
-Once the versioning has been correctly configured and you have created a snapshot, you can access those documents by adding the version to the url to access that archived version (e.g. /docs/Previous/getting-started). 
+Once the versioning has been correctly configured and you have created a snapshot, you can access those documents by adding the version to the url to access that archived version (e.g. /docs/Archive/Previous/getting-started). 
 
 To enable the users to interact with these versioned documents through the UI there needs to be some updates to the _config.yml file to setup and enable it. The following is a snippet from the _config.yml file specific to the versioning options that are available.
 
 ```yml
 version_params:
   version_menu: "Release"
+  version_dir: Archive
   versioning: true
   latest: current
   versions:
@@ -76,6 +78,7 @@ version_params:
 | --------- | ----------- | ------ | 
 | versioning | This determines whether the versioning functionality is enabled | true \| false 
 | version_menu | In addition to the version dropdown you can specify some text to display alongside it<br/> If you do not wish to use this then make this value an empty string | Release
+| version_dir | This is the directory where all the alternative versions of the documentation will be contained beneath the _docs directory <br/>i.e. setting this to the value of Archive (Note: **No** trailing slash) will mean all alternative versions will be found in _docs/Archive/ | Archive 
 | latest | From the list of versions this determines the one which relates to your base docs directory.<br/> Note the url for your docs will not contain a version identifier for this particular version| current \| v3.1
 | versions | A list of versions you wish to display in the version dropdown <br/> Note that there are several special keywords that can be used: current, main, alpha, beta, rc and pre, see below for more details  | current \| v1.0 \| v2.1.3
 
@@ -94,7 +97,7 @@ The value **main**, is used to display the latest development version of the doc
 
 The value of **alpha**, **beta**, **rc** and **pre** are used to denote that the documentation is a pre-production version and as such a banner is displayed announcing that the code/documentation maybe unstable and the content in the pages are still work in progress so may not be completely up to date or correct.
 
-If you wish to utilise this feature then you must create folders within your _docs directory with the names of those you wish to use and place your documentation inside it/them.
+If you wish to utilise this feature then you must create folders within your _docs/*Archive* directory with the names of those you wish to use and place your documentation inside it/them.
 
 The value of **current** is used to align with the latest version of your documentation in your base _docs folder so there **doesn't** need to be a specific folder created and named 'current' to serve them. The name 'current', for the value of 'latest' in the previous example, can be changed to whatever you wish to name the current release but be aware that the version set in the _config.yml file also needs to match it! See the example below where we have called the latest release v3.2 rather than 'current' and we also have a version exactly named v3.2 too, as mentioned this version will point to your base _docs directory. 
 
@@ -154,7 +157,7 @@ title: Documentation
 Now not every version of your documentation will have a change in structure and therefore require an update to toc.yml. To remove this overhead a mapping file is used to tell Docsy Jekyll which TOC it should use for a particular version,
 the benefit of this is that if the structure of your site does not change then you do not need to create an additional toc.yml file.
 
-You will have a toc-mapping.yml file in your _docs directory and the contents will contain the code below to map a particular version with a particular TOC file to use. You need to update this file for each version you create even if you do not need to create a new TOC file.
+You will have a toc-mapping.yml file in your _data directory and the contents will contain the code below to map a particular version with a particular TOC file to use. You need to update this file for each version you create even if you do not need to create a new TOC file.
 
 ```yml
 # This file can be used to explicitly map a release to a specific table-of-contents

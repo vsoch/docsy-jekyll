@@ -5,15 +5,15 @@
   {% include google-analytics.html %}
   {% if site.version_params.versioning == true %}
     {% assign pageversion = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
-    {% assign currentpageversion = pageversion[2] %}
+    {% assign currentpageversion = pageversion[3] %}
     {% comment %}
       Let's check to see if we have one of the versions in the URL if not then we are on the latest version
     {% endcomment %}
       {% if site.version_params.versions contains currentpageversion %}
-        {% assign currentpageversionpath = pageversion[2] | prepend: "/" %}
+        {% assign currentpageversionpath = site.version_params.version_dir | append: '/' | append: pageversion[3] | append: '/' %}
         {% comment %}
           Remove the version from the URL to get the latest document url for use in the alerts etc
-        {% endcomment %}
+        {% endcomment %}        
         {% assign latestversion = page.url | replace: currentpageversionpath, '' %}
       {% else %}
         {% comment %}
@@ -53,8 +53,8 @@
                     </li>
                   {% else %}
                     {% if page.url != "/docs/" %}
-                      {% if site.version_params.versioning == true and crumb == currentpageversion %}
-                      <!-- Don't display the version number in the breadcrumb -->
+                      {% if site.version_params.versioning == true and (crumb == currentpageversion or crumb == site.version_params.version_dir) %}
+                      <!-- Don't display the version number or directory in the breadcrumb -->
                       {% else %}
                       <li class="breadcrumb-item">
                         <a href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>

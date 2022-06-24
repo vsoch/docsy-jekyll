@@ -29,7 +29,7 @@
         {% if currentpageversion == site.version_params.latest %}
           {% assign versionlink = 'docs'  %}
         {% else %}
-          {% assign versionlink = 'docs/' | append: currentpageversion  %}
+          {% assign versionlink = 'docs/' | append: site.version_params.version_dir | append: '/' | append: currentpageversion  %}
         {% endif %}
         
         <li class="td-sidebar-nav__section-title">
@@ -44,7 +44,7 @@
                     {% if currentpageversion == site.version_params.latest %}
                       {% assign versionlink = 'docs'  %}
                     {% else %}
-                      {% assign versionlink = 'docs/' | append: currentpageversion %}
+                      {% assign versionlink = 'docs/' | append: site.version_params.version_dir | append: '/' | append: currentpageversion %}
                     {% endif %}
                   {% else %}
                     {% assign versionlink = 'docs'  %}

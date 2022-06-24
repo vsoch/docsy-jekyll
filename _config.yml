@@ -41,6 +41,7 @@ dockerhub: vanessa
 
 version_params:
   version_menu: "Release"
+  version_dir: Archive
   versioning: true
   latest: Current
   versions:
