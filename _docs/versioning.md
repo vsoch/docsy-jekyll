@@ -12,7 +12,7 @@ Versioning documentation is a useful feature that can be achieved using Docsy Je
 
 ## Implementation
 
-The way in which versioning is achieved is by duplicating your whole document directory and placing it inside an 'archive' subdirectory with the name of that version. The following illustrates what the base document root looks like without another version for this Docsy Jekyll site.
+The way in which versioning is achieved is by duplicating your whole document directory and placing it inside an 'archive' subdirectory with the name of that version. The following illustrates what the base document root looks like *without* another version for this Docsy Jekyll site.
 
 ```
 document root
@@ -26,7 +26,11 @@ document root
         subfolder.md
         versioning.md
 ```
-To create a version of this documentation we first create a folder with the version name we want to use inside of the 'archive' folder and copy all the files and folders from our root _docs folder into that new folder, we therefore end up with a structure such as below where we moved the older documentation into the folder 'Previous'. Once we have done that we effectively have taken a snapshot of our documents at a point in time and will no longer maintain these. If you look at the structure of this site you will see the 'Previous' folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release.
+To create a version of this documentation we first create a folder with the version name we want to use inside of the 'archive' folder and copy all the files and folders from our root _docs folder into that new folder. That might look like this:
+
+<insert code block here - can't do alongside suggestion!>
+
+After we do this, we end up with a structure shown below - the older documentation is moved into the folder 'Previous'. This step effectively takes a snapshot of our documents at a point in time and the expectation is that we will no longer maintain these pages. If you look at the structure of this site you will see the 'Previous' folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release. This means that if you look at this page on the current site and then choose "Previous" from the version tab, you will get a 404 (not found).
 
 <pre><code>
 document root
@@ -97,7 +101,7 @@ The value **main**, is used to display the latest development version of the doc
 
 The value of **alpha**, **beta**, **rc** and **pre** are used to denote that the documentation is a pre-production version and as such a banner is displayed announcing that the code/documentation maybe unstable and the content in the pages are still work in progress so may not be completely up to date or correct.
 
-If you wish to utilise this feature then you must create folders within your _docs/*Archive* directory with the names of those you wish to use and place your documentation inside it/them.
+If you wish to utilize this feature then you must create folders within your _docs/*Archive* directory with the names of those you wish to use and place your documentation inside it/them.
 
 The value of **current** is used to align with the latest version of your documentation in your base _docs folder so there **doesn't** need to be a specific folder created and named 'current' to serve them. The name 'current', for the value of 'latest' in the previous example, can be changed to whatever you wish to name the current release but be aware that the version set in the _config.yml file also needs to match it! See the example below where we have called the latest release v3.2 rather than 'current' and we also have a version exactly named v3.2 too, as mentioned this version will point to your base _docs directory. 
 
@@ -162,7 +166,7 @@ You will have a toc-mapping.yml file in your _data directory and the contents wi
 ```yml
 # This file can be used to explicitly map a release to a specific table-of-contents
 # (TOC). You'll want to use this after any revamps to information architecture, to ensure
-# that the navigation for older versions still work.
+# that the navigation for older versions still works.
 
 Current: toc
 Previous: previous-toc
