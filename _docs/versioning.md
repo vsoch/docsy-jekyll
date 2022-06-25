@@ -9,6 +9,12 @@ Versioning documentation is a useful feature that can be achieved using Docsy Je
 
 {% include alert.html type="info" title="Note: This only allows you to version documents inside the _docs folder, it does not allow you to version any files outside of that, such as Pages, Posts etc." %}
 
+The following information will take you through the detailed setup of versioning your documentation but in summary there will be four tasks that need to be completed to version your documents.
+
+1. Copy the current _docs content into a subfolder of _docs/Archive (e.g., within a folder named by the version)
+2. Add a corresponding table of contents to _data/versions
+3. Update the _data/toc-mapping.yml file to point the new table of contents
+4. Test your site locally to ensure it works as expected!
 
 ## Implementation
 
@@ -26,11 +32,16 @@ document root
         subfolder.md
         versioning.md
 ```
-To create a version of this documentation we first create a folder with the version name we want to use inside of the 'archive' folder and copy all the files and folders from our root _docs folder into that new folder. That might look like this:
+To create a version of this documentation we first create a folder with the version name we want to use inside of the 'archive' folder and copy all the files and folders from our root _docs folder into that new folder. You could use the following commands to achieve this:
 
-<insert code block here - can't do alongside suggestion!>
+```shell
+# Our last release is version "Previous" (could also be 1.0.0 or semver), we are pinning the docs to this version`
+mkdir -p _docs/Archive/Previous
+# copy all content under _docs except Archive into this new folder.`
+cp -r _docs/!(Archive) _docs/Archive/Previous
+```
 
-After we do this, we end up with a structure shown below - the older documentation is moved into the folder 'Previous'. This step effectively takes a snapshot of our documents at a point in time and the expectation is that we will no longer maintain these pages. If you look at the structure of this site you will see the 'Previous' folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release. This means that if you look at this page on the current site and then choose "Previous" from the version tab, you will get a 404 (not found).
+After we do this, we end up with a structure shown below - the older documentation is moved into the folder 'Previous'. This step effectively takes a snapshot of our documents at a point in time and the expectation is that we will no longer maintain these pages. If you look at the structure of this site you will see the 'Previous' folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release. This means that if you look at this page on the current site and then choose "Previous" from the version dropdown, you will get a 404 error (not found).
 
 <pre><code>
 document root
@@ -62,6 +73,7 @@ To enable the users to interact with these versioned documents through the UI th
 version_params:
   version_menu: "Release"
   version_dir: Archive
+  tocversion_dir: versions
   versioning: true
   latest: current
   versions:
@@ -82,11 +94,12 @@ version_params:
 | --------- | ----------- | ------ | 
 | versioning | This determines whether the versioning functionality is enabled | true \| false 
 | version_menu | In addition to the version dropdown you can specify some text to display alongside it<br/> If you do not wish to use this then make this value an empty string | Release
-| version_dir | This is the directory where all the alternative versions of the documentation will be contained beneath the _docs directory <br/>i.e. setting this to the value of Archive (Note: **No** trailing slash) will mean all alternative versions will be found in _docs/Archive/ | Archive 
+| version_dir | This is the directory where all the alternative versions of the documentation will be contained beneath the _docs directory <br/>i.e. setting this to the value of Archive (Note: **No** trailing slash) will mean all alternative versions will be found in _docs/Archive/ | Archive
+|  tocversion_dir | This is the directory inside your _data directory where Docsy Jekyll will find the alternative TOC files that are used for other versions of the documentation. You can configure this to be whatever name you like, just ensure your other TOCs can be found there! | versions 
 | latest | From the list of versions this determines the one which relates to your base docs directory.<br/> Note the url for your docs will not contain a version identifier for this particular version| current \| v3.1
 | versions | A list of versions you wish to display in the version dropdown <br/> Note that there are several special keywords that can be used: current, main, alpha, beta, rc and pre, see below for more details  | current \| v1.0 \| v2.1.3
 
-{% include alert.html type="warning" title="Note: The versions listed must have the same name as the folder name in which that version of the documentation resides otherwise jekyll it will not find it! The exception is the version 'current' which does not have a separate folder and is used to inform jekyll to utilise the base _docs folder." %}
+{% include alert.html type="warning" title="Note: The versions listed must have the same name as the folder name in which that version of the documentation resides otherwise jekyll it will not find it! The exception is the version 'current' which does not have a separate folder and is used to inform jekyll to utilize the base _docs folder." %}
 
 ### Version Keywords
 There are six special keywords that can be used in the versions config.
@@ -108,6 +121,8 @@ The value of **current** is used to align with the latest version of your docume
 ```yml
 version_params:
   version_menu: "Release"
+  version_dir: Archive
+  tocversion_dir: versions
   versioning: true
   latest: v3.2
   versions:
@@ -117,18 +132,45 @@ version_params:
     - v3.1
 ```
 
+### Configuring Version Alerts
+
+Depending on the version keywords you may use Docsy Jekyll tries to determine if the documentation is historical (e.g. out of date) or is a upcoming release of information and will show one of the following banners to alert users to the fact that they are not reviewing the current version of the documentation. 
+
+|![Historical Versions]({{ site.baseurl }}/assets/img/versionalertoutdated.png)|
+|:--:| 
+| *This banner is shown for historical versions of your documentation* |
+
+|![Beta Versions]({{ site.baseurl }}/assets/img/versionalertbeta.png)|
+|:--:| 
+| *This banner is shown for pre-production versions of your documentation* |
+
+|![Development Versions]({{ site.baseurl }}/assets/img/versionalertmain.png)|
+|:--:| 
+| *This banner is shown for development versions of your documentation* |
+
+These banners can be customised to have the wording or imagery you require by altering the HTML in the _includes/versionalert.html file.
+
 ## Table of Contents Handling (TOC)
 
 As with the documents, your TOC contents also need to be updated so they correctly point to the document versions you are viewing.
 
-You will need to update the toc file as the structure of your documentation/toc changes over time but as we have taken a snapshot of our documentation we need to do the same thing for our toc so it reflects the document structure at that point in time too. You will see that for this site we have the versions of Current and Previous and you will see that the Current version has all the information about versioning which didn't exist in the prior version.
+You will need to update the toc file as the structure of your documentation/toc changes over time but as we have taken a snapshot of our documentation so we need to do the same thing for our toc so it reflects the document structure at that point in time too. You will see that for this site we have the versions of Current and Previous and you will see that the Current version has all the information about versioning which didn't exist in the prior version.
 
-To enable the TOC to change based on the version, we have to create a new toc file and name it {version}-toc.yml, so in this site we have created previous-toc.yml in the _data directory that has the TOC structure for the prior version where we did not have the versioning.md file present. 
+To enable the TOC to change based on the version, we have to create a new toc file and name it {version}-toc.yml and it must be placed in a subdirectory of _data whose name is specified by the tocversion_dir parameter in the _config.yml file (for this site it can be found in the _data/versions subdirectory). We have created previous-toc.yml in the _data/versions directory that has the TOC structure for the prior version where we did not have the versioning.md file present. 
+
+
+To create this version of the toc file file we can use the following commands
+```shell
+# Our last release is version "Previous" so we want to create a TOC for that inside our versions directory
+mkdir -p _data/versions
+# copy the existing TOC file to our version subdirectory and name it as {version}-toc.yml
+cp  _data/toc.yml _data/versions/previous-toc.yml
+```
 
 
 {% include alert.html type="info" title="Note: The toc.yml file will always be our current table of contents pointing to the most recent version of the documentation in the base of our _docs folder. When adding additional items to your toc.yml file you do not need to worry about the version identifier as that is taken care of by Docsy Jekyll when viewing alternative versions, continue to have the urls pointing to the files in the base docs directory." %}
 
-Here is what our current toc.yml file in our _data directory looks like, the previous-toc.yml file will look identical apart from omitting the 'Versioning' title and link which was added for this release.
+Here is what our current toc.yml file in our _data directory looks like, the previous-toc.yml file will look identical apart from omitting the 'Versioning' title and link which was added for this release, and of course will live in the versions subdirectory of _data as well.
 
 ```yml
 title: Documentation
@@ -171,9 +213,12 @@ You will have a toc-mapping.yml file in your _data directory and the contents wi
 Current: toc
 Previous: previous-toc
 ```
+**You do not need to prefix the name of the new TOC filename with the folder (in our case versions) as Docsy Jekyll will retrieve that from the _config.yml file and add that to the path.**  
+
 {% include alert.html type="info" title="Note: If a version cannot be found in this mapping file then the standard toc.yml in the _data directory will be used instead." %}
 
-Because we added the versioning.md markdown file to this site we needed a new toc as well so that it could be accessed from the menu. If we had only made an update to the content of the files that already existed, then we could have pointed Previous to toc in the yml above to use the same toc.yml file.
+
+Because we added the versioning.md markdown file to this site we needed a new toc so that this new content could be accessed from the TOC menu. If we had only made an update to the content of the files that already existed, then we could have pointed Previous to toc in the yml above to use the same toc.yml file.
 
 ## Issues with Permalinks
 
