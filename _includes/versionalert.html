@@ -1,0 +1,24 @@
+<div class="archive_note">
+    {% if civersion == "main" %}
+    <div>
+      <div style="float:left; margin-right:20px; margin-bottom:20px"><i class="fa fa-3x fa-exclamation-triangle" aria-hidden="true" style="color:orange;"></i></div>
+      <div>
+        This documentation is for the latest development version so both code and documentation may be unstable. The content in these pages are not guaranteed to be up to date or correct and may change at any time so please refer to the <a href="{{ site.url }}{{ site.baseurl }}{{ latestversion }}">latest version</a> where necessary.
+      </div>
+    </div>
+    {% elsif civersion == "beta" or civersion == "alpha" or civersion == "rc" or civersion == "pre" %}
+    <div>
+      <div style="float:left; margin-right:20px; margin-bottom:20px"><i class="fa fa-3x fa-exclamation-triangle" aria-hidden="true" style="color:blue;"></i></div>
+      <div>
+        This documentation is for the latest pre-production version so both code and documentation may be unstable. The content in these pages are still work in progress so may not be completely up to date or correct. Please see the <a href="{{ site.url }}{{ site.baseurl }}{{ latestversion }}">latest version</a> where necessary.
+      </div>
+    </div>
+    {% else %}
+    <div>
+      <div style="float:left; margin-right:20px; margin-bottom:20px"><i class="fa fa-3x fa-exclamation-triangle" aria-hidden="true" style="color:red;"></i></div>
+      <div>
+            Version {{currentpageversion}} of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For the most up-to-date documentation, please see the <a href="{{ site.url }}{{ site.baseurl }}{{ latestversion }}">latest version.</a>  
+      </div>
+    </div>
+    {% endif %}
+</div>

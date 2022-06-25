@@ -16,8 +16,17 @@
     {% else %}
       {% assign tocfilename = "toc" %}
     {% endif %}
-
-    {% for section in site.data[tocfilename]) %}
+    
+    {% comment %}
+     Previous toc versions are held in a version subdirectory which can be user configured
+    {% endcomment %}
+    {% if tocfilename == "toc" %}
+      {% assign tocdata = site.data[tocfilename] %}
+    {% else %}
+      {% assign tocdata = site.data.[site.version_params.tocversion_dir][tocfilename] %}
+    {% endif %}
+    
+    {% for section in tocdata %}
       <ul class="td-sidebar-nav__section pr-md-3">
         {% capture sectionUrl %} 
           {{ section.url | replace: "/", "" }} 
