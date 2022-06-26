@@ -39,9 +39,11 @@ twitter: vsoch
 linkedin: vsochat
 dockerhub: vanessa
 
+# These options are used to configure the locations of your version history when you want to serve versioned documents
 version_params:
   version_menu: "Release"
   version_dir: Archive
+  tocversion_dir: versions
   versioning: true
   latest: Current
   versions:
