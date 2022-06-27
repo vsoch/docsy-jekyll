@@ -224,8 +224,17 @@ Previous: previous-toc
 
 {% include alert.html type="info" title="Note: If a version cannot be found in this mapping file then the standard toc.yml in the _data directory will be used instead." %}
 
-
 Because we added the versioning.md markdown file to this site we needed a new toc so that this new content could be accessed from the TOC menu. If we had only made an update to the content of the files that already existed, then we could have pointed Previous to toc in the yml above to use the same toc.yml file.
+
+## Versioning and Search
+
+As you will have seen in the [Versioning Options](#versioning-options) you have the ability to configure Docsy Jekyll to perform it's searches over the entire site's documentation, or only certain versions which you can specify. If you choose not to enable it in _config.yml (allow_search = false) then the searches that get performed will only be over the most current version of the documentation in your base _docs folder. If you prefer to have this enabled then you will need to provide a list of search versions (search_version in _config.yml) that you wish to be displayed if a match is found. The following image shows what your users would be shown if you have this enabled. You can see that the search was for the term 'start' and we have several results returned but two both for the 'Getting Started' topic. The reason for this is due to a result being returned within the current version as well as a result being returned for the previous version as denoted by the badges of 'Current' and 'Previous' below the titles. 
+
+
+| *Searching with Versioning enabled*|
+|:--:|
+|![Search with Versions]({{ site.baseurl }}/assets/img/docsy-jekyll-version-search.png)
+
 
 ## Issues with Permalinks
 
