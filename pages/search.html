@@ -13,15 +13,17 @@ excluded_in_search: true
 
 <ul id="search-results"></ul>
 
+{% capture version_prefix %}/docs/{{ site.version_params.version_dir }}/{% endcapture %}
 <script>
 	window.data = {
 		{% for post in site.docs %}
 				{% unless post.excluded_in_search %}
 					{% if added %},{% endif %}
-					{% assign added = false %}
+					{% assign added = false %}{% assign version_dir = post.url | split: version_prefix %}{% assign docs_version = version_dir[1] | split: "/" %}
 					"{{ post.url | slugify }}": {
 						"id": "{{ post.url | slugify }}",
 						"title": "{{ post.title | xml_escape }}",
+						"version": "{% if post.url contains site.version_params.version_dir %}{{ docs_version[0] }}{% else %}all{% endif %}",
 						"categories": "{{ post.categories | join: ", " | xml_escape }}",
 						"url": " {{ post.url | xml_escape }}",
 						"content": {{ post.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
@@ -36,6 +38,7 @@ excluded_in_search: true
 					"{{ post.url | slugify }}": {
 						"id": "{{ post.url | slugify }}",
 						"title": "{{ post.title | xml_escape }}",
+						"version": "all", 
 						"categories": "{{ post.categories | join: ", " | xml_escape }}",
 						"url": " {{ post.url | xml_escape }}",
 						"content": {{ post.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
@@ -50,6 +53,7 @@ excluded_in_search: true
 					"{{ post.url | slugify }}": {
 						"id": "{{ post.url | slugify }}",
 						"title": "{{ post.title | xml_escape }}",
+						"version": "all",
 						"categories": "{{ post.categories | join: ", " | xml_escape }}",
 						"url": " {{ post.url | xml_escape }}",
 						"content": {{ post.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
