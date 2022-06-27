@@ -18601,4 +18601,18 @@ footer {
         height: 5rem;
         visibility: hidden
     }
+
+    .archive_note {
+        border: blue;
+        border-width: 2px;
+        border-style: solid;
+        padding: 25px;
+        background-color: #F8F9FA;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
 }

@@ -10,8 +10,6 @@
           url: "docs/getting-started#development"
         - title: Customization
           url: "docs/getting-started#customization"
-    - title: Versioning
-      url: "docs/versioning"
     - title: "About"
       url: "about"
     - title: "News"

@@ -3,6 +3,26 @@
   <!-- Copyright 2019-2021 Vanessa Sochat-->
   {% include head.html %}
   {% include google-analytics.html %}
+  {% if site.version_params.versioning == true %}
+    {% assign pageversion = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
+    {% assign currentpageversion = pageversion[3] %}
+    {% comment %}
+      Let's check to see if we have one of the versions in the URL if not then we are on the latest version
+    {% endcomment %}
+      {% if site.version_params.versions contains currentpageversion %}
+        {% assign currentpageversionpath = site.version_params.version_dir | append: '/' | append: pageversion[3] | append: '/' %}
+        {% comment %}
+          Remove the version from the URL to get the latest document url for use in the alerts etc
+        {% endcomment %}        
+        {% assign latestversion = page.url | replace: currentpageversionpath, '' %}
+      {% else %}
+        {% comment %}
+          Otherwise we are using the latest version
+        {% endcomment %}
+        {% assign latestversion = page.url %}
+        {% assign currentpageversion = site.version_params.latest %}
+      {% endif %}
+  {% endif %}
   <body class="td-section">
     {% include header.html %}
     <div class="container-fluid td-outer">
@@ -25,17 +45,37 @@
             <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
 	      <ol class="breadcrumb spb-1">
               {% assign crumbs = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
-              {% for crumb in crumbs offset: 1 %}{% if crumb != "index" %}{% if forloop.last %}
-                <li class="breadcrumb-item active" aria-current="page">
-	          <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-                </li>{% else %}
-                {% if page.url != "/docs/" %}<li class="breadcrumb-item">
-                  <a href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>
-                </li>{% endif %}{% endif %}
-                {% endif %}{% endfor %}
+              {% for crumb in crumbs offset: 1 %}
+                {% if crumb != "index" %}
+                  {% if forloop.last %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                      <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                  {% else %}
+                    {% if page.url != "/docs/" %}
+                      {% if site.version_params.versioning == true and crumb == currentpageversion or crumb == site.version_params.version_dir %}
+                      <!-- Don't display the version number or directory in the breadcrumb -->
+                      {% else %}
+                      <li class="breadcrumb-item">
+                        <a href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>
+                      </li>
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
 	      </ol>
            </nav>
-           <div class="td-content">
+           <div class="td-content">        
+            {% if site.version_params.versioning == true %}
+              {% if site.version_params.latest != currentpageversion %}
+              {% capture civersion %}
+                {{- currentpageversion | downcase | strip -}}
+              {% endcapture %}
+                {% include versionalert.html %}
+              {% endif %}
+            {% endif %}
+            
 	      {{ content }}	
               {% if section.links %}<div class="section-index">
                <hr class="panel-line">{% for child in section.links %}

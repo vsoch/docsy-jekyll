@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - adding support for documentation versioning (0.0.25)
  - adding more verbose example for subfolders (0.0.24)
  - sidebar fix to support multiple top level menus (0.0.23)
  - added support for github_branch (default 'master') in config (0.0.22)
