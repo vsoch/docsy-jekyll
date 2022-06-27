@@ -65,13 +65,43 @@ excluded_in_search: true
 
 		if (results.length) {
 			var resultsHTML = "";
+			var searchVersions = [{% for v in site.version_params.search_versions %}"{{ v }}",{% endfor %}"all"]
 			results.forEach(function (result) {
-
+			
   				var item = window.data[result.ref]
+
+				// Versioning is disabled
+				if (("{{ site.version_params.versioning }}" == "false") && (item.version != "all")) {
+				    return
+				}
+
+				// Skip result if showing versions disabled
+				if (("{{ site.version_params.allow_search }}" == "false") && (item.version != "all")) {
+				    return
+				}
+
+                               // Skip result if version not in all or versions allowed for search
+				if (("{{ site.version_params.versioning }}" == "true") && ("{{ site.version_params.allow_search }}" == "true") && (!searchVersions.includes(item.version))) {
+				    return
+				}
+
                                 if (item.title) {
 					contentPreview = getPreview(query, item.content, 170),
 					titlePreview = getPreview(query, item.title);
-					resultsHTML += "<li><h4><a href='{{ site.baseurl }}" + item.url.trim() + "'>" + titlePreview + "</a></h4><p><small>" + contentPreview + "</small></p></li>";
+
+					// If we only allow one version (all) skip adding a badge
+					if (searchVersions.length == 1 ||  "{{ site.version_params.versioning }}" == "false"){
+						versionBadge = ""
+
+					// Any older version shows up in gray
+					} else if (item.version != "all") {
+						versionBadge = "<span class='badge badge-secondary'>" + item.version + "</span>"
+
+					// Current is blue (primary)
+					} else {
+						versionBadge = "<span class='badge badge-{{ site.tag_color }}'>Current</span>"
+                                       }
+					resultsHTML += "<li><h4><a href='{{ site.baseurl }}" + item.url.trim() + "'>" + titlePreview + "</a></h4><p>" + versionBadge +"<small>" + contentPreview + "</small></p></li>";
 				}
 			});
 

@@ -45,6 +45,13 @@ version_params:
   version_dir: Archive
   tocversion_dir: versions
   versioning: true
+
+  # Disable so older versions cannot be searched
+  allow_search: true  
+
+  # Allow these versions to be searched
+  search_versions:
+    - Previous
   latest: Current
   versions:
     - Current

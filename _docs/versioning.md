@@ -76,6 +76,11 @@ version_params:
   tocversion_dir: versions
   versioning: true
   latest: current
+  allow_search: true  
+  search_versions:
+    - main
+    - current
+    - beta
   versions:
     - main
     - current
@@ -97,6 +102,8 @@ version_params:
 | version_dir | This is the directory where all the alternative versions of the documentation will be contained beneath the _docs directory <br/>i.e. setting this to the value of Archive (Note: **No** trailing slash) will mean all alternative versions will be found in _docs/Archive/ | Archive
 |  tocversion_dir | This is the directory inside your _data directory where Docsy Jekyll will find the alternative TOC files that are used for other versions of the documentation. You can configure this to be whatever name you like, just ensure your other TOCs can be found there! | versions 
 | latest | From the list of versions this determines the one which relates to your base docs directory.<br/> Note the url for your docs will not contain a version identifier for this particular version| current \| v3.1
+| allow_search | A boolean to indicate if we should allow searching over versions. If False, only the current is displayed in results | true \| false 
+| search_version | A list of versions to include in the search. Current or latest will be tagged with the site.tag_color, the rest will be gray | current \| previous
 | versions | A list of versions you wish to display in the version dropdown <br/> Note that there are several special keywords that can be used: current, main, alpha, beta, rc and pre, see below for more details  | current \| v1.0 \| v2.1.3
 
 {% include alert.html type="warning" title="Note: The versions listed must have the same name as the folder name in which that version of the documentation resides otherwise jekyll it will not find it! The exception is the version 'current' which does not have a separate folder and is used to inform jekyll to utilize the base _docs folder." %}
