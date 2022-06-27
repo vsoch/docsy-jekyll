@@ -65,7 +65,7 @@ excluded_in_search: true
 
 		if (results.length) {
 			var resultsHTML = "";
-                       var searchVersions = [{% for v in site.version_params.search_versions %}"{{ v }}",{% endfor %}"all"]
+			var searchVersions = [{% for v in site.version_params.search_versions %}"{{ v }}",{% endfor %}"all"]
 			results.forEach(function (result) {
 			
   				var item = window.data[result.ref]
@@ -89,17 +89,17 @@ excluded_in_search: true
 					contentPreview = getPreview(query, item.content, 170),
 					titlePreview = getPreview(query, item.title);
 
-                                       // If we only allow one version (all) skip adding a badge
-                                       if (searchVersions.length == 1 ||  "{{ site.version_params.versioning }}" == "false"){
-                                         versionBadge = ""
+					// If we only allow one version (all) skip adding a badge
+					if (searchVersions.length == 1 ||  "{{ site.version_params.versioning }}" == "false"){
+						versionBadge = ""
 
 					// Any older version shows up in gray
-                                       } else if (item.version != "all") {
-                                          versionBadge = "<span class='badge badge-secondary'>" + item.version + "</span>"
+					} else if (item.version != "all") {
+						versionBadge = "<span class='badge badge-secondary'>" + item.version + "</span>"
 
 					// Current is blue (primary)
-                                       } else {
-                                          versionBadge = "<span class='badge badge-{{ site.tag_color }}'>Current</span>"
+					} else {
+						versionBadge = "<span class='badge badge-{{ site.tag_color }}'>Current</span>"
                                        }
 					resultsHTML += "<li><h4><a href='{{ site.baseurl }}" + item.url.trim() + "'>" + titlePreview + "</a></h4><p>" + versionBadge +"<small>" + contentPreview + "</small></p></li>";
 				}
