@@ -153,7 +153,7 @@ If you want to add an external url for a parent or child, do this:
 ### News Posts
 
 It might be the case that your site or group has news items that would
-warrent sharing with the community, and should be available as a feed.
+warrant sharing with the community, and should be available as a feed.
 For this reason, you can write traditional [posts](https://jekyllrb.com/docs/posts/) in the `_posts`
 folder that will parse into the site [feed]({{ site.baseurl }}/feed.xml)
 The bottom of the page links the user to a post archive, where posts are organized
@@ -321,7 +321,7 @@ should follow the instructions to [set up a project](https://circleci.com/docs/e
 and then in the project settings be sure to enable building forked build requests,
 and to cancel redundant builds. The preview will be built on CircleCI, and saved
 to static files for you to browse. The only change you will need is to edit
-the static files location to be the name of your respository, which is at te
+the static files location to be the name of your repository, which is at te
 bottom of the `.circleci/config.yml` file:
 
 ```yaml
