@@ -14,6 +14,7 @@ Critical items to know are:
  - changed behaviour
 
 ## [master](https://github.com/vsoch/docsy-jekyll/tree/master)
+ - added Windows hash for assets (0.0.26)
  - adding support for documentation versioning (0.0.25)
  - adding more verbose example for subfolders (0.0.24)
  - sidebar fix to support multiple top level menus (0.0.23)
