@@ -29,7 +29,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vsoch.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/nexlice"
+repo: "https://github.com/nexlice/baekjoon"
 github_user: "nexlice"
 github_repo: "baekjoon"
 github_branch: "master"
