@@ -29,9 +29,9 @@ baseurl: "/nexlice.github.io" # the subpath of your site, e.g. /blog
 url: "https://vsoch.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/vsoch/docsy-jekyll"
-github_user: "vsoch"
-github_repo: "docsy-jekyll"
+repo: "https://github.com/nexlice"
+github_user: "nexlice"
+github_repo: ""
 github_branch: "master"
 
 # Optional
