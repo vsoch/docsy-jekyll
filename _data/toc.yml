@@ -1,11 +1,21 @@
 - title: "Web basics"
-  url: "docs/HTML"
+  url: "docs/Web-basics"
   links:
     - title: "HTML"
       url: "docs/HTML"
       children:
+      # 만약 children이 없으면 컴파일이 안됨.
         - title: Achievement Goals
           url: "docs/HTML#achievement-goals"
+        - title: HTML, CSS, and JavaScript
+          url: "docs/HTML#HTML,-CSS,-and-JavaScript"
+        - title: HTML
+          url: "docs/HTML#HTML"
+        - title: tag, content, attribute, and element
+          url: "docs/HTML#tag,-content,-attribute,-and-element"
+        - title: Markdown, and Markup
+          url: "docs/HTML#Markdown,-and-Markup"
+          
 
 - title: Documentation
   url: docs
