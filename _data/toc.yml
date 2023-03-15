@@ -1,8 +1,11 @@
-# - title: "Web basics"
-#   url: "docs/web-basics"
-#   links:
-#     - title: "HTML"
-#       url: "docs/HTML"
+- title: "Web basics"
+  url: "docs/HTML"
+  links:
+    - title: "HTML"
+      url: "docs/HTML"
+      children:
+        - title: Achievement Goals
+          url: "docs/HTML#achievement-goals"
 
 - title: Documentation
   url: docs
