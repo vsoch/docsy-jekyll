@@ -248,13 +248,13 @@ button 태그의 예시는 아래와 같다.
 <button>Submit</button>
 <div class = "name">나원후</div>
 ```
-#### Dizzy Things
+## Dizzy Things
 - tag : div 따위의 것들
 - contents : 태그와 태그 사이에 들어있는 것.  
 - attribute : 태그 안에 넣는 class="name" 따위의 것들
 - element : 태그로 감싼 한 덩어리; 태그 + 콘텐츠 (+ 속성) = 요소 (element)  
 
-#### Markdown and Markup
+## Markdown and Markup
 
 Markdown은  Markup아래에 있는 언어의 일종이다. 정의를 살피면 다음과 같다.
 
