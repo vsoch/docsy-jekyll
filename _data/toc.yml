@@ -1,9 +1,8 @@
-
-- title: "Web basics"
-  url: "docs/web-basics"
-  links:
-    - title: "HTML"
-      url: "docs/HTML"
+# - title: "Web basics"
+#   url: "docs/web-basics"
+#   links:
+#     - title: "HTML"
+#       url: "docs/HTML"
 
 - title: Documentation
   url: docs
