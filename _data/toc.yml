@@ -4,17 +4,17 @@
   links:
     - title: "HTML"
       url: "docs/HTML"
-      children:
-        - title: Achievement Goals
-          url: "docs/HTML#achievement-goals"
-        - title: HTML, CSS, 그리고 JavaScript
-          url: "docs/HTML#HTML,-CSS,-그리고-JavaScript"
-        - title: HTML
-          url: "docs/HTML#HTML"
-        - title: tag, content, attribute, 그리고 element
-          url: "docs/HTML#tag,-content,-attribute,-그리고-element"
-        - title: Markdown, 그리고 Markup
-          url: "docs/HTML#Markdown,-그리고-Markup"
+      # children:
+      #   - title: Achievement Goals
+      #     url: "docs/HTML#achievement-goals"
+      #   - title: HTML, CSS, 그리고 JavaScript
+      #     url: "docs/HTML#HTML,-CSS,-그리고-JavaScript"
+      #   - title: HTML
+      #     url: "docs/HTML#HTML"
+      #   - title: tag, content, attribute, 그리고 element
+      #     url: "docs/HTML#tag,-content,-attribute,-그리고-element"
+      #   - title: Markdown, 그리고 Markup
+      #     url: "docs/HTML#Markdown,-그리고-Markup"
 
 - title: Documentation
   url: docs
