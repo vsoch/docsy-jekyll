@@ -20,7 +20,7 @@ description: Learn the basic HTML!
 - 읽기 쉬운, 의미있는 HTML 문서를 작성할 수 있는가?  
 - HTML5 semantic tag란 무엇인가?  
 
-## HTML, CSS, and JavaScript
+## HTML CSS and JavaScript
 HTML은 Hyper Text Markup language 으로, 웹 페이지의 구조를 표현한다.  
 
 ~~컴퓨터 공학에서 일반적으로 사용하는 **언어**라는 개념은 **마크업 언어**가 아닌 **프로그래밍 언어**이기 때문에 HTML을 언어라고 하면 버튼이 눌리는 사람이 간혹 있다.~~
@@ -248,13 +248,13 @@ button 태그의 예시는 아래와 같다.
 <button>Submit</button>
 <div class = "name">나원후</div>
 ```
-#### tag, content, attribute, and element
+#### Dizzy Things
 - tag : div 따위의 것들
 - contents : 태그와 태그 사이에 들어있는 것.  
 - attribute : 태그 안에 넣는 class="name" 따위의 것들
 - element : 태그로 감싼 한 덩어리; 태그 + 콘텐츠 (+ 속성) = 요소 (element)  
 
-#### Markdown, and Markup
+#### Markdown and Markup
 
 Markdown은  Markup아래에 있는 언어의 일종이다. 정의를 살피면 다음과 같다.
 
