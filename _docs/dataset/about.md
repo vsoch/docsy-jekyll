@@ -1,6 +1,7 @@
 ---
 title: Dataset Information
 description: Descriptive Statistics and other properties of the dataset
+categories: [dataset]
 ---
 
 # Dataset information

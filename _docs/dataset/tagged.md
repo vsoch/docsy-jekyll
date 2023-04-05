@@ -1,6 +1,7 @@
 ---
 title: (Coming Soon) Tagged dataset
 description: Download the Tagged dataset
+categories: [dataset]
 ---
 
 # Tagged dataset

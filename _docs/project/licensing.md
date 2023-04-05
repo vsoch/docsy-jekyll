@@ -1,6 +1,7 @@
 ---
 title: Licensing
 description: Code of Conduct
+categories: [project]
 ---
 
 # Licensing

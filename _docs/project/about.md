@@ -1,6 +1,7 @@
 ---
 title: About
 description: Project description
+categories: [project]
 ---
 
 # About this Project
