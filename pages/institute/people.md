@@ -5,7 +5,7 @@ description: Get to know our team
 permalink: /people/
 ---
 
-# About this Project
+# Our team
 
 {% include alert.html type="warning" title="Add description!" %}
 

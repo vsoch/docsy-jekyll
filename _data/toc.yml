@@ -13,7 +13,7 @@
   url: "dataset"
   links:
     - title: General Information
-      url: "docs/dataset/information"
+      url: "docs/dataset/about"
       children:
         - title: Descriptive statistics
           url: "docs/dataset/about#descriptive-statistics"
