@@ -4,25 +4,40 @@
 - title: Project
   url: project
   links:
-    - title: "Getting Started"
-      url: "docs/getting-started"
-      children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
-    - title: Versioning
-      url: "docs/versioning"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"
-- title: "Extras"
-  url: "docs/extras"
+    - title: About the project
+      url: "docs/project/about"
+    - title: Licensing
+      url: "docs/project/licensing"
+
+- title: Dataset
+  url: "dataset"
   links:
-    - title: Quizzes
-      url: "docs/extras/example-quiz"
-    - title: Tags Page
-      url: "tags"
+    - title: General Information
+      url: "docs/dataset/information"
+      children:
+        - title: Descriptive statistics
+          url: "docs/dataset/information#descriptive-statistics"
+        - title: Number of lines
+          url: "docs/dataset/information#number-of-lines"
+        - title: Number of columns
+          url: "docs/dataset/information#number-of-columns"
+    - title: Annotated dataset
+      url: "docs/dataset/annotated"
+    - title: Unannotated dataset
+      url: "docs/dataset/unannotated"
+
+- title: Archive
+  url: "archive"
+
+- title: News and Updates
+  url: "news"
+
+- title: Who we are?
+  url: "about"
+  links:
+    - title: About
+      url: "about"
+    - title: People
+      url: "people"
+    - title: Contact us
+      url: "contact"

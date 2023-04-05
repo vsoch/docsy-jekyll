@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Articles
-permalink: /archive/
+title: News Archive
+permalink: /news/archive
 ---
 # News Archive
 
