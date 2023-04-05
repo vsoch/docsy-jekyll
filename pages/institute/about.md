@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-description: About the Data Science Institute
+title: About our institute
+description: Get to know the Data Science Institute
 permalink: /about/
 ---
 

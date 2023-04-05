@@ -4,7 +4,7 @@
 - title: Project
   url: project
   links:
-    - title: About the project
+    - title: About
       url: "docs/project/about"
     - title: Licensing
       url: "docs/project/licensing"
@@ -16,15 +16,15 @@
       url: "docs/dataset/information"
       children:
         - title: Descriptive statistics
-          url: "docs/dataset/information#descriptive-statistics"
+          url: "docs/dataset/about#descriptive-statistics"
         - title: Number of lines
-          url: "docs/dataset/information#number-of-lines"
+          url: "docs/dataset/about#number-of-lines"
         - title: Number of columns
-          url: "docs/dataset/information#number-of-columns"
-    - title: Annotated dataset
-      url: "docs/dataset/annotated"
-    - title: Unannotated dataset
-      url: "docs/dataset/unannotated"
+          url: "docs/dataset/about#number-of-columns"
+    - title: Untagged dataset
+      url: "docs/dataset/not-tagged"
+    - title: Tagged dataset
+      url: "docs/dataset/tagged"
 
 - title: Archive
   url: "archive"
@@ -33,7 +33,7 @@
   url: "news"
 
 - title: Who we are?
-  url: "about"
+  url: "institute"
   links:
     - title: Data Science Institute
       url: "about"

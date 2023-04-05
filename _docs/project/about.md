@@ -1,5 +1,5 @@
 ---
-title: Project about
+title: About
 description: Project description
 ---
 

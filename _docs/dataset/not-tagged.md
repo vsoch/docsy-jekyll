@@ -1,9 +1,9 @@
 ---
-title: Annotated dataset
-description: Download the annotated dataset
+title: Unatagged dataset
+description: Download the untagged dataset
 ---
 
-# Annotated dataset
+# Unatagged dataset
 
 {% include alert.html type="warning" title="Add description!" %}
 

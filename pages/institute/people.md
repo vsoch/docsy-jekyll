@@ -1,7 +1,7 @@
 ---
 layout: page
 title: People
-description: People in the Data Science Institute
+description: Get to know our team
 permalink: /people/
 ---
 
