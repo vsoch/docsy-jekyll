@@ -8,4 +8,4 @@ categories: [project]
 
 {% include alert.html type="warning" title="Add description!" %}
 
-Fill this page.
+Adding this page to check for version control.
