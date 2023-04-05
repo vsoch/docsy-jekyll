@@ -8,4 +8,4 @@ categories: [project]
 
 {% include alert.html type="warning" title="Add description!" %}
 
-Adding this page to check for version control.
+Adding this page to check Git branch separation between `dev` and `master`.
