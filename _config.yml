@@ -87,6 +87,8 @@ permalink: /:year/:title/
 markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
+
+
 # Collections
 collections:
   docs:
@@ -112,3 +114,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+plugins:
+  - github-pages

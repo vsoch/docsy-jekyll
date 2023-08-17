@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        ...
+    </head>
 <html lang="en" class="no-js">
   <!-- Copyright 2019-2021 Vanessa Sochat-->
   {% include head.html %}
@@ -7,7 +14,7 @@
     {% assign pageversion = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
     {% assign currentpageversion = pageversion[3] %}
     {% comment %}
-      Let's check to see if we have one of the versions in the URL if not then we are on the latest version
+      Let's check to see if we have  one of the versions in the URL if not then we are on the latest version
     {% endcomment %}
       {% if site.version_params.versions contains currentpageversion %}
         {% assign currentpageversionpath = site.version_params.version_dir | append: '/' | append: pageversion[3] | append: '/' %}
@@ -65,8 +72,8 @@
                 {% endif %}
               {% endfor %}
 	      </ol>
-           </nav>
-           <div class="td-content">        
+          </nav>
+          <div class="td-content">        
             {% if site.version_params.versioning == true %}
               {% if site.version_params.latest != currentpageversion %}
               {% capture civersion %}
@@ -78,16 +85,16 @@
             
 	      {{ content }}	
               {% if section.links %}<div class="section-index">
-               <hr class="panel-line">{% for child in section.links %}
-                 <div class="entry">
+              <hr class="panel-line">{% for child in section.links %}
+                <div class="entry">
                     <h5>
                         <a href="{% if child.url %}{{ site.baseurl }}{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">{{ child.title }}</a>
                     </h5>
                     <p>{{ child.description }}</p>
-                 </div>{% endfor %}
+                </div>{% endfor %}
               </div>{% endif %}
               {% include feedback.html %}
-           </div>
+          </div>
           </main>
         </div>
       </div>
